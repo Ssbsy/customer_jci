@@ -1,4 +1,4 @@
-import 'package:customer_jci/pages/home_page.dart';
+import 'package:customer_jci/pages/homepage/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
