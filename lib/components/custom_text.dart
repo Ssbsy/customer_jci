@@ -9,6 +9,7 @@ class CustomText extends StatelessWidget {
   final bool underline;
   final bool isJustified;
   final int? maxLines;
+  final bool isCentered;
   const CustomText({
     super.key,
     required this.title,
@@ -18,6 +19,7 @@ class CustomText extends StatelessWidget {
     this.underline = false,
     this.isJustified = false,
     this.maxLines,
+    this.isCentered = false,
   });
 
   @override
@@ -25,7 +27,12 @@ class CustomText extends StatelessWidget {
     return Text(
       title,
       maxLines: maxLines,
-      textAlign: isJustified ? TextAlign.justify : TextAlign.start,
+      textAlign:
+          isCentered
+              ? TextAlign.center
+              : isJustified
+              ? TextAlign.justify
+              : TextAlign.start,
       style: GoogleFonts.roboto(
         textStyle: TextStyle(
           fontSize: fontSize,
