@@ -29,7 +29,7 @@ class SeeYouIn2026 extends StatelessWidget {
         ),
         Container(
           width: double.infinity,
-          height: double.infinity,
+          height: MediaQuery.of(context).size.height * 0.6,
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -78,6 +78,10 @@ class SeeYouIn2026 extends StatelessWidget {
                   Image.asset('assets/facebook logo footer.png'),
                   Image.asset('assets/facebook logo footer.png'),
                 ],
+              ),
+              CustomText(
+                title: "© 2026 8Box Solutions. All rights reserved",
+                textColor: Colors.white,
               ),
             ],
           ),

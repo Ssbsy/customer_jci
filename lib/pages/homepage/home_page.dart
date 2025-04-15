@@ -10,12 +10,18 @@ import 'package:customer_jci/pages/homepage/utils/see_you_in_2026.dart';
 import 'package:customer_jci/pages/homepage/utils/welcome_to_clark_pampanga.dart';
 import 'package:customer_jci/pages/homepage/utils/world_congress_2026.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:customer_jci/globals.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePage extends StatefulWidget {
+  final bool showMenuIcon;
+  const HomePage({super.key, this.showMenuIcon = false});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,13 +83,31 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
-                    child: Image.asset(
-                      'assets/JCI - logo - png.png',
-                      height: 80,
-                      width: 80,
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30.0),
+                        child: Image.asset(
+                          'assets/JCI_logo_png.png',
+                          height: 80,
+                          width: 80,
+                        ),
+                      ),
+                      if (widget.showMenuIcon)
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/Button_image.png',
+                              fit: BoxFit.contain,
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(Icons.menu, size: 30, weight: 2),
+                            ),
+                          ],
+                        ),
+                    ],
                   ),
                 ],
               ),
@@ -113,7 +137,6 @@ class HomePage extends StatelessWidget {
                   NeedHelp(),
                   const Gap(25),
                   SeeYouIn2026(),
-                  // const Gap(25),
                 ],
               ),
             ),

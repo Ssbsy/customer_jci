@@ -1,13 +1,22 @@
 import 'package:customer_jci/components/custom_text.dart';
+import 'package:customer_jci/globals.dart' as globals;
 import 'package:customer_jci/pages/login_page.dart';
 import 'package:customer_jci/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:customer_jci/globals.dart';
 
-class JciWorldCongress2026 extends StatelessWidget {
+class JciWorldCongress2026 extends StatefulWidget {
   const JciWorldCongress2026({super.key});
 
+  @override
+  State<JciWorldCongress2026> createState() => _JciWorldCongress2026State();
+}
+
+class _JciWorldCongress2026State extends State<JciWorldCongress2026> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -154,15 +163,9 @@ class JciWorldCongress2026 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(22),
                   ),
                   child: GestureDetector(
-                    onTap:
-                        () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => RegisterPage(),
-                          ),
-                        ),
+                    onTap: () => Get.to(const RegisterPage()),
                     child: CustomText(
-                      title: 'Register',
+                      title: globals.isLoggedIn ? 'Buy Now' : 'Register',
                       textColor: Colors.white,
                     ),
                   ),
@@ -181,13 +184,11 @@ class JciWorldCongress2026 extends StatelessWidget {
                       textColor: Colors.white,
                     ),
                     GestureDetector(
-                      onTap:
-                          () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const LoginPage(),
-                            ),
-                          ),
+                      onTap: () {
+                        Get.to(() => const LoginPage())?.then((_) {
+                          setState(() {});
+                        });
+                      },
                       child: CustomText(
                         title: 'Log In',
                         textColor: Colors.white,
