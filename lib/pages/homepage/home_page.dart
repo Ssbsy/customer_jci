@@ -6,9 +6,11 @@ import 'package:customer_jci/pages/homepage/utils/highlights_register_now.dart';
 import 'package:customer_jci/pages/homepage/utils/need_help.dart';
 import 'package:customer_jci/pages/homepage/utils/partnerships.dart';
 import 'package:customer_jci/pages/homepage/utils/ready_for_jci_world_congress_2022.dart';
+import 'package:customer_jci/pages/homepage/utils/see_you_in_2026.dart';
 import 'package:customer_jci/pages/homepage/utils/welcome_to_clark_pampanga.dart';
 import 'package:customer_jci/pages/homepage/utils/world_congress_2026.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 
 class HomePage extends StatelessWidget {
@@ -110,10 +112,8 @@ class HomePage extends StatelessWidget {
                   const Gap(25),
                   NeedHelp(),
                   const Gap(25),
-                  Column(children: [
-                      
-                    ],
-                  ),
+                  SeeYouIn2026(),
+                  // const Gap(25),
                 ],
               ),
             ),

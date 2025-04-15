@@ -17,7 +17,7 @@ class ReadyForJciWorldCongress2026 extends StatelessWidget {
           ),
           const Gap(10),
           CustomText(
-            title: "Ready for JCI World Congress 2022?",
+            title: "Ready for JCI World Congress 2026?",
             fontSize: 35,
             fontWeight: FontWeight.bold,
           ),

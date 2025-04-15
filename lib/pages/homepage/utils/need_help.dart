@@ -49,6 +49,56 @@ class NeedHelp extends StatelessWidget {
             ),
           ),
         ),
+        const Gap(30),
+        Image.asset(
+          'assets/location_icon_JCI_homepage.png',
+          height: 40,
+          fit: BoxFit.cover,
+        ),
+        const Gap(15),
+        CustomText(title: 'Clark, Pampanga', fontSize: 16),
+        const Gap(25),
+        Image.asset(
+          'assets/call_icon_homepage.png',
+          height: 40,
+          fit: BoxFit.cover,
+        ),
+        const Gap(10),
+        Divider(
+          thickness: 5,
+          color: Colors.grey.shade800,
+          indent: 120,
+          endIndent: 120,
+        ),
+        const Gap(25),
+        Image.asset(
+          'assets/message_icon_homepage.png',
+          height: 40,
+          fit: BoxFit.cover,
+        ),
+        const Gap(10),
+        Divider(
+          thickness: 5,
+          color: Colors.grey.shade800,
+          indent: 120,
+          endIndent: 120,
+        ),
+        const Gap(25),
+        Image.asset('assets/Clark-Map.png', fit: BoxFit.cover),
+        const Gap(25),
+        Row(
+          spacing: 15,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/Twitter.png', fit: BoxFit.cover),
+
+            Image.asset('assets/Facebook.png', fit: BoxFit.cover),
+
+            Image.asset('assets/Instagram.png', fit: BoxFit.cover),
+
+            Image.asset('assets/WhatsApp.png', fit: BoxFit.cover),
+          ],
+        ),
       ],
     );
   }
