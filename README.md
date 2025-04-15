@@ -1,6 +1,6 @@
 # customer_jci
 
-A new Flutter project.
+Customer Side of JCI Project
 
 ## Getting Started
 
