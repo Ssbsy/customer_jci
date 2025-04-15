@@ -1,5 +1,9 @@
 import 'package:customer_jci/components/custom_text.dart';
 import 'package:customer_jci/pages/homepage/utils/JCI_World_Congress_2026.dart';
+import 'package:customer_jci/pages/homepage/utils/explore_our_products.dart';
+import 'package:customer_jci/pages/homepage/utils/highlights_register_now.dart';
+import 'package:customer_jci/pages/homepage/utils/partnerships.dart';
+import 'package:customer_jci/pages/homepage/utils/welcome_to_clark_pampanga.dart';
 import 'package:customer_jci/pages/homepage/utils/world_congress_2026.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -37,7 +41,7 @@ class HomePage extends StatelessWidget {
                       title: '20 Days 22:30:21',
                       textColor: Colors.white,
                     ),
-                    const Gap(10), // Fixed spacing here
+                    const Gap(10),
                     Container(
                       padding: const EdgeInsets.symmetric(
                         vertical: 10,
@@ -82,7 +86,6 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
-          // Scrollable content starts here
           Expanded(
             child: SingleChildScrollView(
               child: Column(
@@ -91,14 +94,13 @@ class HomePage extends StatelessWidget {
                   const Gap(25),
                   WorldCongress2026(),
                   const Gap(25),
-                  Container(
-                    width: double.infinity,
-                    child: Stack(
-                      children: [
-                        SvgPicture.asset('assets/Welcome to Mongolia.svg'),
-                      ],
-                    ),
-                  ),
+                  WelcomeToClarkPampanga(),
+                  const Gap(25),
+                  Partnerships(),
+                  const Gap(25),
+                  HighlightsRegisterNow(),
+                  const Gap(25),
+                  ExploreOurProducts(),
                 ],
               ),
             ),
