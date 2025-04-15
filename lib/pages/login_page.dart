@@ -5,6 +5,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(automaticallyImplyLeading: true),
+    ); //For navigation back lang yung automaticallyImplyLeading, alisin niyo na lang siya later, follow niyo design sa figma
   }
 }

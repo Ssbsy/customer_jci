@@ -1,4 +1,6 @@
 import 'package:customer_jci/components/custom_text.dart';
+import 'package:customer_jci/pages/login_page.dart';
+import 'package:customer_jci/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -151,7 +153,19 @@ class JciWorldCongress2026 extends StatelessWidget {
                     color: Colors.red.shade600,
                     borderRadius: BorderRadius.circular(22),
                   ),
-                  child: CustomText(title: 'Register', textColor: Colors.white),
+                  child: GestureDetector(
+                    onTap:
+                        () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RegisterPage(),
+                          ),
+                        ),
+                    child: CustomText(
+                      title: 'Register',
+                      textColor: Colors.white,
+                    ),
+                  ),
                 ),
               ),
 
@@ -166,10 +180,19 @@ class JciWorldCongress2026 extends StatelessWidget {
                       title: 'Already have an account?',
                       textColor: Colors.white,
                     ),
-                    CustomText(
-                      title: 'Log In',
-                      textColor: Colors.white,
-                      underline: true,
+                    GestureDetector(
+                      onTap:
+                          () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LoginPage(),
+                            ),
+                          ),
+                      child: CustomText(
+                        title: 'Log In',
+                        textColor: Colors.white,
+                        underline: true,
+                      ),
                     ),
                   ],
                 ),

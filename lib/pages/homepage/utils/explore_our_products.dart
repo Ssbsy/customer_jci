@@ -8,7 +8,7 @@ class ExploreOurProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 30),
       child: Column(
         children: [
           CustomText(
@@ -25,12 +25,13 @@ class ExploreOurProducts extends StatelessWidget {
             isJustified: true,
           ),
           const Gap(15),
-          _card(
-            context,
-            'assets/white hoodie 4.png',
-            'Hoodie',
-            'Available: 150',
-          ),
+          _card(context, 'assets/white_hoodie.png', 'Hoodie', 'Available: 150'),
+          const Gap(15),
+          _card(context, 'assets/Tumbler_01.png', 'Tumbler', 'Available: 76'),
+          const Gap(15),
+          _card(context, 'assets/umbrella_01.png', 'Umbrella', 'Available: 45'),
+          const Gap(15),
+          _card(context, 'assets/Planner.png', 'Planner', 'Available: 90'),
         ],
       ),
     );
@@ -73,7 +74,7 @@ class ExploreOurProducts extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.deepOrange.shade700,
+                  color: Color(0xFFE0401E),
                   borderRadius: BorderRadius.circular(22),
                 ),
                 child: Center(
