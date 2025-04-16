@@ -1,4 +1,5 @@
 import 'package:customer_jci/components/custom_text.dart';
+import 'package:customer_jci/components/end_drawer_widget.dart';
 import 'package:customer_jci/pages/homepage/utils/jci_world_congress_2026.dart';
 import 'package:customer_jci/pages/homepage/utils/explore_our_products.dart';
 import 'package:customer_jci/pages/homepage/utils/frequently_asked_questions.dart';
@@ -11,7 +12,6 @@ import 'package:customer_jci/pages/homepage/utils/welcome_to_clark_pampanga.dart
 import 'package:customer_jci/pages/homepage/utils/world_congress_2026.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:customer_jci/globals.dart';
 
 class HomePage extends StatefulWidget {
   final bool showMenuIcon;
@@ -101,9 +101,15 @@ class _HomePageState extends State<HomePage> {
                               'assets/Button_image.png',
                               fit: BoxFit.contain,
                             ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.menu, size: 30, weight: 2),
+                            Builder(
+                              builder: (context) {
+                                return IconButton(
+                                  onPressed: () {
+                                    Scaffold.of(context).openEndDrawer();
+                                  },
+                                  icon: Icon(Icons.menu, size: 30, weight: 2),
+                                );
+                              },
                             ),
                           ],
                         ),
@@ -143,6 +149,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      endDrawer: const EndDrawerWidget(),
     );
   }
 }
