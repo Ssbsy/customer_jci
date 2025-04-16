@@ -1,4 +1,3 @@
-import 'package:customer_jci/components/custom_text.dart';
 import 'package:customer_jci/components/end_drawer_widget.dart';
 import 'package:customer_jci/components/footer_widget.dart';
 import 'package:customer_jci/components/header_widget.dart';
@@ -29,35 +28,38 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Column(
         children: [
-          const HeaderWidget(),
+          HeaderWidget(),
 
           Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  JciWorldCongress2026(),
-                  const Gap(25),
-                  WorldCongress2026(),
-                  const Gap(25),
-                  WelcomeToClarkPampanga(),
-                  const Gap(25),
-                  Partnerships(),
-                  const Gap(25),
-                  HighlightsRegisterNow(),
-                  const Gap(25),
-                  ExploreOurProducts(),
-                  const Gap(25),
-                  ReadyForJciWorldCongress2026(),
-                  const Gap(25),
-                  FrequentlyAskedQuestions(),
-                  const Gap(25),
-                  NeedHelp(),
-                  const Gap(25),
-                  SeeYouIn2026(),
+            child: RefreshIndicator(
+              onRefresh: () => globals.refreshPage(this),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    JciWorldCongress2026(),
+                    const Gap(25),
+                    WorldCongress2026(),
+                    const Gap(25),
+                    WelcomeToClarkPampanga(),
+                    const Gap(25),
+                    Partnerships(),
+                    const Gap(25),
+                    HighlightsRegisterNow(),
+                    const Gap(25),
+                    ExploreOurProducts(),
+                    const Gap(25),
+                    ReadyForJciWorldCongress2026(),
+                    const Gap(25),
+                    FrequentlyAskedQuestions(),
+                    const Gap(25),
+                    NeedHelp(),
+                    const Gap(25),
+                    SeeYouIn2026(),
 
-                  const Gap(25),
-                  FooterWidget(),
-                ],
+                    const Gap(25),
+                    FooterWidget(),
+                  ],
+                ),
               ),
             ),
           ),

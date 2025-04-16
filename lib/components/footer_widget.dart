@@ -57,8 +57,8 @@ class FooterWidget extends StatelessWidget {
               Row(
                 children: [
                   Image.asset('assets/facebook logo footer.png'),
-                  Image.asset('assets/facebook logo footer.png'),
-                  Image.asset('assets/facebook logo footer.png'),
+                  Image.asset('assets/twitter logo footer.png'),
+                  Image.asset('assets/instagram logo footer.png'),
                 ],
               ),
               CustomText(

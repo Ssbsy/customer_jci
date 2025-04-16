@@ -1,10 +1,19 @@
 import 'package:customer_jci/components/custom_text.dart';
+import 'package:customer_jci/globals.dart' as globals;
+import 'package:customer_jci/pages/homepage/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
-class EndDrawerWidget extends StatelessWidget {
+class EndDrawerWidget extends StatefulWidget {
   const EndDrawerWidget({Key? key}) : super(key: key);
 
+  @override
+  State<EndDrawerWidget> createState() => _EndDrawerWidgetState();
+}
+
+class _EndDrawerWidgetState extends State<EndDrawerWidget> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -13,7 +22,13 @@ class EndDrawerWidget extends StatelessWidget {
         children: <Widget>[
           Image.asset('assets/logo-login 1.png', fit: BoxFit.cover),
           const Gap(25),
-          _action('Home'),
+          _action(
+            'Home',
+            onTap: () {
+              Navigator.pop(context);
+              Get.to(const HomePage());
+            },
+          ),
           _action('Profile'),
           _action('Buy tickets'),
           _action('Link tickets'),
@@ -26,6 +41,11 @@ class EndDrawerWidget extends StatelessWidget {
             'Sign Out',
             color: Colors.deepOrange.shade700,
             textColor: Colors.white,
+            onTap: () {
+              globals.isLoggedIn = false;
+              Navigator.pop(context);
+              Get.to(HomePage());
+            },
           ),
         ],
       ),
