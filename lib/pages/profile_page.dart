@@ -219,7 +219,7 @@ class ProfilePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 25),
+                  const Gap(25),
                 ],
               ),
             ),

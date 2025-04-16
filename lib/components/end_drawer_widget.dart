@@ -2,6 +2,7 @@ import 'package:customer_jci/components/custom_text.dart';
 import 'package:customer_jci/globals.dart' as globals;
 import 'package:customer_jci/pages/buy_ticket_page.dart';
 import 'package:customer_jci/pages/homepage/home_page.dart';
+import 'package:customer_jci/pages/link_ticket_page.dart';
 import 'package:customer_jci/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -49,6 +50,7 @@ class _EndDrawerWidgetState extends State<EndDrawerWidget> {
             'Link tickets',
             onTap: () {
               Navigator.pop(context);
+              Get.to(() => const LinkTicketPage());
             },
           ),
           _action(

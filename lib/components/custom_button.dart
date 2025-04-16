@@ -8,6 +8,7 @@ class CustomButton extends StatelessWidget {
   final Color textColor;
   final bool isBold;
   final VoidCallback onTap;
+  final double padding;
   const CustomButton({
     super.key,
     required this.text,
@@ -16,6 +17,7 @@ class CustomButton extends StatelessWidget {
     this.borderColor = Colors.black,
     this.textColor = Colors.black,
     this.isBold = false,
+    this.padding = 15,
     required this.onTap,
   });
 
@@ -25,7 +27,7 @@ class CustomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.all(15),
+        padding: EdgeInsets.all(padding),
         decoration: BoxDecoration(
           color: containerColor,
           border: Border.all(color: borderColor),
