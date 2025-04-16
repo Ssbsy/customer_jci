@@ -3,13 +3,12 @@ import 'package:customer_jci/components/custom_text.dart';
 import 'package:customer_jci/components/end_drawer_widget.dart';
 import 'package:customer_jci/components/footer_widget.dart';
 import 'package:customer_jci/components/header_widget.dart';
-import 'package:customer_jci/pages/homepage/utils/see_you_in_2026.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class BuyNowPage extends StatelessWidget {
-  const BuyNowPage({super.key});
+class BuyTicketPage extends StatelessWidget {
+  const BuyTicketPage({super.key});
 
   @override
   Widget build(BuildContext context) {

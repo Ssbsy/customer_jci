@@ -1,6 +1,6 @@
 import 'package:customer_jci/components/custom_text.dart';
 import 'package:customer_jci/globals.dart' as globals;
-import 'package:customer_jci/pages/buy_now_page.dart';
+import 'package:customer_jci/pages/buy_ticket_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
@@ -55,7 +55,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                     ),
                     child: Center(
                       child: GestureDetector(
-                        onTap: () => Get.to(const BuyNowPage()),
+                        onTap: () => Get.to(const BuyTicketPage()),
                         child: CustomText(
                           title: "Buy Now",
                           textColor: Colors.white,
