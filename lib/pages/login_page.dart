@@ -15,7 +15,7 @@ class LoginPage extends StatelessWidget {
         leading: IconButton(
           onPressed: () {
             globals.isLoggedIn = true;
-            Get.to(HomePage());
+            Get.to(() => HomePage());
           },
           icon: Icon(Icons.arrow_back),
         ),

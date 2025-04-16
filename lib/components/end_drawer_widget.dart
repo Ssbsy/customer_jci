@@ -1,6 +1,8 @@
 import 'package:customer_jci/components/custom_text.dart';
 import 'package:customer_jci/globals.dart' as globals;
+import 'package:customer_jci/pages/buy_ticket_page.dart';
 import 'package:customer_jci/pages/homepage/home_page.dart';
+import 'package:customer_jci/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
@@ -26,17 +28,59 @@ class _EndDrawerWidgetState extends State<EndDrawerWidget> {
             'Home',
             onTap: () {
               Navigator.pop(context);
-              Get.to(const HomePage());
+              Get.to(() => const HomePage());
             },
           ),
-          _action('Profile'),
-          _action('Buy tickets'),
-          _action('Link tickets'),
-          _action('Hotel'),
-          _action('Map'),
-          _action('Shop'),
-          _action('FAQ'),
-          _action('COC Team'),
+          _action(
+            'Profile',
+            onTap: () {
+              Navigator.pop(context);
+              Get.to(() => ProfilePage());
+            },
+          ),
+          _action(
+            'Buy tickets',
+            onTap: () {
+              Navigator.pop(context);
+              Get.to(() => const BuyTicketPage());
+            },
+          ),
+          _action(
+            'Link tickets',
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          _action(
+            'Hotel',
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          _action(
+            'Map',
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          _action(
+            'Shop',
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          _action(
+            'FAQ',
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          _action(
+            'COC Team',
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
           _action(
             'Sign Out',
             color: Colors.deepOrange.shade700,
@@ -44,7 +88,7 @@ class _EndDrawerWidgetState extends State<EndDrawerWidget> {
             onTap: () {
               globals.isLoggedIn = false;
               Navigator.pop(context);
-              Get.to(HomePage());
+              Get.to(() => HomePage());
             },
           ),
         ],

@@ -11,7 +11,7 @@ class FooterWidget extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: MediaQuery.of(context).size.height * 0.6,
+          height: MediaQuery.of(context).size.height * 0.62,
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -54,13 +54,16 @@ class FooterWidget extends StatelessWidget {
                   CustomText(title: 'FAQ', textColor: Colors.white),
                 ],
               ),
+              const Gap(15),
               Row(
+                spacing: 10,
                 children: [
                   Image.asset('assets/facebook logo footer.png'),
                   Image.asset('assets/twitter logo footer.png'),
                   Image.asset('assets/instagram logo footer.png'),
                 ],
               ),
+              const Gap(15),
               CustomText(
                 title: "© 2026 8Box Solutions. All rights reserved",
                 textColor: Colors.white,
