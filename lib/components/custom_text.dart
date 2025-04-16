@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomText extends StatelessWidget {
-  final String title;
+  final String? title;
+  final TextSpan? richText;
   final Color textColor;
   final double fontSize;
   final FontWeight fontWeight;
@@ -10,9 +11,11 @@ class CustomText extends StatelessWidget {
   final bool isJustified;
   final int? maxLines;
   final bool isCentered;
+
   const CustomText({
     super.key,
-    required this.title,
+    this.title,
+    this.richText,
     this.textColor = Colors.black,
     this.fontSize = 14,
     this.fontWeight = FontWeight.normal,
@@ -24,15 +27,27 @@ class CustomText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textAlign =
+        isCentered
+            ? TextAlign.center
+            : isJustified
+            ? TextAlign.justify
+            : TextAlign.start;
+
+    if (richText != null) {
+      return Text.rich(
+        richText!,
+        maxLines: maxLines,
+        overflow: TextOverflow.ellipsis,
+        textAlign: textAlign,
+      );
+    }
+
     return Text(
-      title,
+      title ?? '',
       maxLines: maxLines,
-      textAlign:
-          isCentered
-              ? TextAlign.center
-              : isJustified
-              ? TextAlign.justify
-              : TextAlign.start,
+      textAlign: textAlign,
+      overflow: TextOverflow.ellipsis,
       style: GoogleFonts.roboto(
         textStyle: TextStyle(
           fontSize: fontSize,

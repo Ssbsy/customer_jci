@@ -173,31 +173,31 @@ class _JciWorldCongress2026State extends State<JciWorldCongress2026> {
               ),
 
               const Gap(10),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 20.0),
-                child: Row(
-                  spacing: 5,
-                  children: [
-                    CustomText(
-                      title: 'Already have an account?',
-                      textColor: Colors.white,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Get.to(() => const LoginPage())?.then((_) {
-                          setState(() {});
-                        });
-                      },
-                      child: CustomText(
-                        title: 'Log In',
+              if (!globals.isLoggedIn)
+                Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: Row(
+                    spacing: 5,
+                    children: [
+                      CustomText(
+                        title: 'Already have an account?',
                         textColor: Colors.white,
-                        underline: true,
                       ),
-                    ),
-                  ],
+                      GestureDetector(
+                        onTap: () {
+                          Get.to(() => const LoginPage())?.then((_) {
+                            setState(() {});
+                          });
+                        },
+                        child: CustomText(
+                          title: 'Log In',
+                          textColor: Colors.white,
+                          underline: true,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
             ],
           ),
         ],

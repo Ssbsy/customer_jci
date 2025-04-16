@@ -1,6 +1,10 @@
+import 'package:customer_jci/components/custom_button.dart';
 import 'package:customer_jci/components/custom_text.dart';
+import 'package:customer_jci/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class HighlightsRegisterNow extends StatelessWidget {
   const HighlightsRegisterNow({super.key});
@@ -30,6 +34,16 @@ class HighlightsRegisterNow extends StatelessWidget {
                 "We are bringing the world to the Philippines! Join us in Clark, Pampanga for an unforgettable experience where over 6,000 delegates from 120+ countries unite to shape the future of leadership, innovation, and global impact.",
             textColor: Colors.white,
             isJustified: true,
+          ),
+          const Gap(20),
+          CustomButton(
+            onTap: () => Get.to(const RegisterPage()),
+            text: 'Buy Now',
+            textColor: Colors.white,
+            isBold: true,
+            borderRadius: 20,
+            containerColor: Colors.deepOrange,
+            borderColor: Colors.deepOrange,
           ),
           const Gap(20),
           _container(
