@@ -12,7 +12,7 @@ class WelcomeToClarkPampanga extends StatelessWidget {
       child: Stack(
         children: [
           Image.asset(
-            'assets/Welcome_to_Clark_Pampanga_picture.png',
+            'assets/welcome_to_clark_pampanga_picture.png',
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,

@@ -83,7 +83,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                     Padding(
                       padding: const EdgeInsets.only(left: 30.0),
                       child: Image.asset(
-                        'assets/JCI_logo_png.png',
+                        'assets/logo/jci_logo_png.png',
                         height: 80,
                         width: 80,
                       ),
@@ -92,7 +92,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       Row(
                         children: [
                           Image.asset(
-                            'assets/Button_image.png',
+                            'assets/icons/profile_pic.png',
                             fit: BoxFit.contain,
                           ),
                           Builder(

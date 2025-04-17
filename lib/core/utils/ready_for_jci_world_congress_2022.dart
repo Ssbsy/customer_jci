@@ -12,7 +12,7 @@ class ReadyForJciWorldCongress2026 extends StatelessWidget {
       child: Column(
         children: [
           Image.asset(
-            'assets/Ready_for_JCI_Manila_Congress_2026_img.png',
+            'assets/images/ready_for_jci_Manila_Congress_2026_img.png',
             fit: BoxFit.cover,
           ),
           const Gap(10),

@@ -65,7 +65,7 @@ class FrequentlyAskedQuestions extends StatelessWidget {
     List<String?>? subTitle3,
   }) {
     return ExpansionTile(
-      leading: Image.asset('assets/tw-Chat-Alt-2-Regular.png'),
+      leading: Image.asset('assets/icons/tw_chat_alt-2_regular.png'),
       title: CustomText(title: title),
       children: [
         Padding(

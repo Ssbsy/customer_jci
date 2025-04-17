@@ -7,7 +7,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:jci_worldcon_customer/app/globals.dart';
 
 class JciWorldCongress2026 extends StatefulWidget {
   const JciWorldCongress2026({super.key});
@@ -129,7 +128,7 @@ class _JciWorldCongress2026State extends State<JciWorldCongress2026> {
                       Row(
                         spacing: 5,
                         children: [
-                          SvgPicture.asset('assets/calendar_icon.svg'),
+                          SvgPicture.asset('assets/icons/calendar_icon.svg'),
                           CustomText(
                             title: 'Date',
                             fontWeight: FontWeight.bold,

@@ -76,7 +76,7 @@ class WorldCongress2026 extends StatelessWidget {
           const Gap(15),
 
           Stack(
-            children: [SvgPicture.asset('assets/YouTube_Video_Player.svg')],
+            children: [SvgPicture.asset('assets/youTube_video_player.svg')],
           ),
         ],
       ),

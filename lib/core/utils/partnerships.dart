@@ -10,7 +10,7 @@ class Partnerships extends StatelessWidget {
     return Column(
       children: [
         CustomText(title: 'Powered by partnerships with '),
-        Image.asset('assets/Philippine_Airlines_png.png'),
+        Image.asset('assets/welcome_to_clark_pampanga_picture.png'),
         const Gap(15),
         Row(
           spacing: 5,
