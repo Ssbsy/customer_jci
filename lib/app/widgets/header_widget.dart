@@ -1,6 +1,6 @@
-import 'package:customer_jci/components/custom_text.dart';
-import 'package:customer_jci/globals.dart' as globals;
-import 'package:customer_jci/pages/buy_ticket_page.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
+import 'package:jci_worldcon_customer/app/globals.dart' as globals;
+import 'package:jci_worldcon_customer/presentations/pages/buy_ticket_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';

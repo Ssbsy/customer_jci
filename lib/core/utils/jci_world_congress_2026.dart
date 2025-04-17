@@ -1,13 +1,13 @@
-import 'package:customer_jci/components/custom_text.dart';
-import 'package:customer_jci/globals.dart' as globals;
-import 'package:customer_jci/pages/login_page.dart';
-import 'package:customer_jci/pages/register_page.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
+import 'package:jci_worldcon_customer/app/globals.dart' as globals;
+import 'package:jci_worldcon_customer/presentations/pages/login_page.dart';
+import 'package:jci_worldcon_customer/presentations/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:customer_jci/globals.dart';
+import 'package:jci_worldcon_customer/app/globals.dart';
 
 class JciWorldCongress2026 extends StatefulWidget {
   const JciWorldCongress2026({super.key});

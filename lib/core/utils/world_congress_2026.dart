@@ -1,4 +1,4 @@
-import 'package:customer_jci/components/custom_text.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';

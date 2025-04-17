@@ -1,8 +1,8 @@
-import 'package:customer_jci/components/custom_button.dart';
-import 'package:customer_jci/components/custom_text.dart';
-import 'package:customer_jci/components/end_drawer_widget.dart';
-import 'package:customer_jci/components/footer_widget.dart';
-import 'package:customer_jci/components/header_widget.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
+import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
+import 'package:jci_worldcon_customer/app/widgets/footer_widget.dart';
+import 'package:jci_worldcon_customer/app/widgets/header_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
