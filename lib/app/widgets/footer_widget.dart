@@ -23,7 +23,7 @@ class FooterWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset('assets/footer-logo-png.png', fit: BoxFit.cover),
+              Image.asset('assets/logo/footer_logo_png.png', fit: BoxFit.cover),
               const Gap(30),
               const Divider(thickness: 2, color: Colors.white, endIndent: 200),
               const Gap(30),
@@ -58,9 +58,9 @@ class FooterWidget extends StatelessWidget {
               Row(
                 spacing: 10,
                 children: [
-                  Image.asset('assets/facebook logo footer.png'),
-                  Image.asset('assets/twitter logo footer.png'),
-                  Image.asset('assets/instagram logo footer.png'),
+                  Image.asset('assets/logo/facebook_logo_footer.png'),
+                  Image.asset('assets/logo/twitter_logo_footer.png'),
+                  Image.asset('assets/logo/instagram_logo_footer.png'),
                 ],
               ),
               const Gap(15),

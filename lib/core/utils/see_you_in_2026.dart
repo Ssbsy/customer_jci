@@ -13,7 +13,7 @@ class SeeYouIn2026 extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.344,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/see_you_in_2026_bg.png'),
+              image: AssetImage('assets/images/see_you_in_2026_bg.png'),
             ),
           ),
           child: Center(
