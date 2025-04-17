@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.167,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/profile_bg.png'),
+                        image: AssetImage('assets/images/profile_bg.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -78,7 +78,7 @@ class ProfilePage extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 10),
                                 Image.asset(
-                                  'assets/qr_img.png',
+                                  'assets/images/qr_img.png',
                                   fit: BoxFit.cover,
                                 ),
                               ],
@@ -89,7 +89,7 @@ class ProfilePage extends StatelessWidget {
                       Positioned(
                         top: 0,
                         child: Image.asset(
-                          'assets/profile_pic.png',
+                          'assets/icons/profile_pic.png',
                           width: 100,
                           height: 100,
                         ),

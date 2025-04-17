@@ -80,7 +80,7 @@ class BuyTicketPage extends StatelessWidget {
                                         fontWeight: FontWeight.bold,
                                       ),
                                       Image.asset(
-                                        'assets/JCI_logo_png.png',
+                                        'assets/logo/jci_logo_png.png',
                                         height: 60,
                                         fit: BoxFit.cover,
                                       ),

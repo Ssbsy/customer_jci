@@ -3,7 +3,6 @@ import 'package:jci_worldcon_customer/app/globals.dart' as globals;
 import 'package:jci_worldcon_customer/presentations/login_page.dart';
 import 'package:jci_worldcon_customer/presentations/register_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -128,7 +127,10 @@ class _JciWorldCongress2026State extends State<JciWorldCongress2026> {
                       Row(
                         spacing: 5,
                         children: [
-                          SvgPicture.asset('assets/icons/calendar_icon.svg'),
+                          Image.asset(
+                            'assets/icons/calendar_icon.png',
+                            fit: BoxFit.cover,
+                          ),
                           CustomText(
                             title: 'Date',
                             fontWeight: FontWeight.bold,

@@ -18,7 +18,10 @@ class LoginPage extends StatelessWidget {
         children: [
           // Background Image
           Positioned.fill(
-            child: Image.asset('assets/worldcon_bg.jpg', fit: BoxFit.cover),
+            child: Image.asset(
+              'assets/images/see_you_in_2026_bg.png',
+              fit: BoxFit.cover,
+            ),
           ),
 
           // Semi-transparent overlay
@@ -52,7 +55,7 @@ class LoginPage extends StatelessWidget {
                           onPressed: () => Navigator.pop(context),
                         ),
                         const Spacer(),
-                        Image.asset('assets/JCI - logo - png.png', height: 70),
+                        Image.asset('assets/logo/jci_logo_png.png', height: 70),
                       ],
                     ),
 

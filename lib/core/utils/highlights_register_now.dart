@@ -48,14 +48,14 @@ class HighlightsRegisterNow extends StatelessWidget {
           const Gap(20),
           _container(
             context,
-            'assets/JCI_World_Congress_2026_bg.png',
+            'assets/images/jci_world_congress_2026_bg.png',
             "JCI WORLD CONGRESS 2026",
             "JCI Philippines is proud to host the 2026 JCI World Congress, bringing together young leaders to drive change, foster partnerships, and create lasting impact.",
           ),
           const Gap(20),
           _container(
             context,
-            'assets/World_Class_Destination_bg.png',
+            'assets/images/world_class_destination_bg.png',
             "World-Class Destination",
             "Clark, Pampanga is a global hub for MICE events with:",
             subTextList: [
@@ -68,7 +68,7 @@ class HighlightsRegisterNow extends StatelessWidget {
           const Gap(20),
           _container(
             context,
-            'assets/An_Unforgettable_Experience_bg.png',
+            'assets/images/an_unforgettable_experience_bg.png',
             "An Unforgettable Experience",
             "From international artists and drone shows to cultural showcases, the 2026 JCI World Congress promises to be the biggest and most exciting yet!",
           ),

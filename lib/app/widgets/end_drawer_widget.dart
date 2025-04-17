@@ -23,7 +23,7 @@ class _EndDrawerWidgetState extends State<EndDrawerWidget> {
       child: ListView(
         padding: const EdgeInsets.symmetric(vertical: 30),
         children: <Widget>[
-          Image.asset('assets/logo-login 1.png', fit: BoxFit.cover),
+          Image.asset('assets/logo/jci_worldcon_logo.png', fit: BoxFit.cover),
           const Gap(25),
           _action(
             'Home',

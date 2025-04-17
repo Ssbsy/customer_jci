@@ -18,7 +18,10 @@ class _RegisterPageState extends State<RegisterPage> {
       body: Stack(
         children: [
           SizedBox.expand(
-            child: Image.asset('assets/worldcon_bg.jpg', fit: BoxFit.cover),
+            child: Image.asset(
+              'assets/images/see_you_in_2026_bg.png',
+              fit: BoxFit.cover,
+            ),
           ),
           Container(color: Colors.white.withOpacity(0.4)),
           Center(
@@ -50,7 +53,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           onPressed: () => Navigator.pop(context),
                         ),
                         const Spacer(),
-                        Image.asset('assets/JCI - logo - png.png', height: 70),
+                        Image.asset('assets/logo/jci_logo_png.png', height: 70),
                       ],
                     ),
                     const SizedBox(height: 16),

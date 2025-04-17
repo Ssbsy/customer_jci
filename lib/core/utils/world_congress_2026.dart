@@ -29,7 +29,7 @@ class WorldCongress2026 extends StatelessWidget {
 
           _card(
             title: 'Innovation and Business',
-            asset: "assets/Innovation_and_Business_logo_png.png",
+            asset: "assets/logo/innovation_and_Business_logo_png.png",
             points: [
               "Global platform for entrepreneurs and business leaders",
               "Exploration of new ventures and strategic partnerships",
@@ -41,7 +41,7 @@ class WorldCongress2026 extends StatelessWidget {
 
           _card(
             title: 'Cultural & Networking Experiences',
-            asset: "assets/Cultural_and_Networking_Experiences_logo.png",
+            asset: "assets/logo/cultural_and_networking_Experiences_logo.png",
             points: [
               "“Tokyo Drift” themed Japan Night",
               "Supercar showcase and street party with DJ",
@@ -53,7 +53,7 @@ class WorldCongress2026 extends StatelessWidget {
 
           _card(
             title: 'Green & Sustainable Solutions',
-            asset: "assets/Green_and_Sustainable_Solutions_logo.png",
+            asset: "assets/logo/green_and_sustainable_solutions_logo.png",
             points: [
               "Sustainable tourism and eco-friendly initiatives",
               "Government-backed infrastructure and green spaces",
@@ -65,7 +65,7 @@ class WorldCongress2026 extends StatelessWidget {
 
           _card(
             title: 'Unforgettable Adventures',
-            asset: "assets/Unforgettable_Adventures_logo.png",
+            asset: "assets/logo/unforgettable_adventures_logo.png",
             points: [
               "Opening Ceremony with a drone show, fireworks and an international artist headliner",
               "Air Force Jet Fighters Flyover",
