@@ -1,5 +1,6 @@
 import 'package:jci_worldcon_customer/app/globals.dart' as globals;
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
+import 'package:jci_worldcon_customer/core/constants/assets.dart';
 import 'package:jci_worldcon_customer/presentations/forgot_pass_page.dart';
 import 'package:jci_worldcon_customer/presentations/home_page.dart';
 import 'package:flutter/material.dart';
@@ -17,12 +18,7 @@ class LoginPage extends StatelessWidget {
       body: Stack(
         children: [
           // Background Image
-          Positioned.fill(
-            child: Image.asset(
-              'assets/images/see_you_in_2026_bg.png',
-              fit: BoxFit.cover,
-            ),
-          ),
+          Positioned.fill(child: Assets.seeYouIn2026),
 
           // Semi-transparent overlay
           Container(color: Colors.white.withOpacity(0.4)),
@@ -55,7 +51,7 @@ class LoginPage extends StatelessWidget {
                           onPressed: () => Navigator.pop(context),
                         ),
                         const Spacer(),
-                        Image.asset('assets/logo/jci_logo_png.png', height: 70),
+                        Assets.jciLogoPng,
                       ],
                     ),
 

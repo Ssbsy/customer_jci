@@ -1,7 +1,7 @@
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:jci_worldcon_customer/core/constants/assets.dart';
 
 class WorldCongress2026 extends StatelessWidget {
   const WorldCongress2026({super.key});
@@ -75,9 +75,7 @@ class WorldCongress2026 extends StatelessWidget {
 
           const Gap(15),
 
-          Stack(
-            children: [SvgPicture.asset('assets/youTube_video_player.svg')],
-          ),
+          Assets.youtubeVideoPlayer,
         ],
       ),
     );

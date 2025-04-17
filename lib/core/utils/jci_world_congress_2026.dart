@@ -1,5 +1,6 @@
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/globals.dart' as globals;
+import 'package:jci_worldcon_customer/core/constants/assets.dart';
 import 'package:jci_worldcon_customer/presentations/login_page.dart';
 import 'package:jci_worldcon_customer/presentations/register_page.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class _JciWorldCongress2026State extends State<JciWorldCongress2026> {
       padding: const EdgeInsets.symmetric(horizontal: 2),
       child: Stack(
         children: [
-          Image.asset('assets/home_background_01.png'),
+          Assets.homeBackground01,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -127,10 +128,7 @@ class _JciWorldCongress2026State extends State<JciWorldCongress2026> {
                       Row(
                         spacing: 5,
                         children: [
-                          Image.asset(
-                            'assets/icons/calendar_icon.png',
-                            fit: BoxFit.cover,
-                          ),
+                          Assets.calendarIcon,
                           CustomText(
                             title: 'Date',
                             fontWeight: FontWeight.bold,

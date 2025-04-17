@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_widgets.dart';
+import 'package:jci_worldcon_customer/core/constants/assets.dart';
 import 'package:jci_worldcon_customer/presentations/login_page.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -17,12 +18,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       body: Stack(
         children: [
-          SizedBox.expand(
-            child: Image.asset(
-              'assets/images/see_you_in_2026_bg.png',
-              fit: BoxFit.cover,
-            ),
-          ),
+          SizedBox.expand(child: Assets.seeYouIn2026),
           Container(color: Colors.white.withOpacity(0.4)),
           Center(
             child: SingleChildScrollView(
@@ -53,7 +49,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           onPressed: () => Navigator.pop(context),
                         ),
                         const Spacer(),
-                        Image.asset('assets/logo/jci_logo_png.png', height: 70),
+                        Assets.jciLogoPng,
                       ],
                     ),
                     const SizedBox(height: 16),

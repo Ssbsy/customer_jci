@@ -1,6 +1,7 @@
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:jci_worldcon_customer/core/constants/assets.dart';
 
 class ReadyForJciWorldCongress2026 extends StatelessWidget {
   const ReadyForJciWorldCongress2026({super.key});
@@ -11,10 +12,7 @@ class ReadyForJciWorldCongress2026 extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Column(
         children: [
-          Image.asset(
-            'assets/images/ready_for_jci_Manila_Congress_2026_img.png',
-            fit: BoxFit.cover,
-          ),
+          Assets.readyForJciWorldCongress2026Img,
           const Gap(10),
           CustomText(
             title: "Ready for JCI World Congress 2026?",

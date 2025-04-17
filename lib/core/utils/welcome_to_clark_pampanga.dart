@@ -1,5 +1,6 @@
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
+import 'package:jci_worldcon_customer/core/constants/assets.dart';
 
 class WelcomeToClarkPampanga extends StatelessWidget {
   const WelcomeToClarkPampanga({super.key});
@@ -11,12 +12,7 @@ class WelcomeToClarkPampanga extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.45,
       child: Stack(
         children: [
-          Image.asset(
-            'assets/welcome_to_clark_pampanga_picture.png',
-            width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-          ),
+          Assets.welcomeToClarkPampangaPicture,
           Align(
             alignment: Alignment.topCenter,
             child: Padding(

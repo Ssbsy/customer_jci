@@ -1,6 +1,7 @@
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:jci_worldcon_customer/core/constants/assets.dart';
 
 class FrequentlyAskedQuestions extends StatelessWidget {
   const FrequentlyAskedQuestions({super.key});
@@ -65,7 +66,7 @@ class FrequentlyAskedQuestions extends StatelessWidget {
     List<String?>? subTitle3,
   }) {
     return ExpansionTile(
-      leading: Image.asset('assets/icons/tw_chat_alt-2_regular.png'),
+      leading: Assets.twChatAlt2Regular,
       title: CustomText(title: title),
       children: [
         Padding(

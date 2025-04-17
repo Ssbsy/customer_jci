@@ -1,3 +1,4 @@
+import 'package:jci_worldcon_customer/app/globals.dart' as globals;
 import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/presentations/register_page.dart';
@@ -27,6 +28,7 @@ class HighlightsRegisterNow extends StatelessWidget {
             fontSize: 30,
             fontWeight: FontWeight.bold,
             textColor: Colors.white,
+            maxLines: 2,
           ),
           const Gap(10),
           CustomText(
@@ -34,11 +36,12 @@ class HighlightsRegisterNow extends StatelessWidget {
                 "We are bringing the world to the Philippines! Join us in Clark, Pampanga for an unforgettable experience where over 6,000 delegates from 120+ countries unite to shape the future of leadership, innovation, and global impact.",
             textColor: Colors.white,
             isJustified: true,
+            maxLines: 5,
           ),
-          const Gap(20),
+          const Gap(35),
           CustomButton(
             onTap: () => Get.to(const RegisterPage()),
-            text: 'Buy Now',
+            text: globals.isLoggedIn ? 'Buy Now' : 'Register Now',
             textColor: Colors.white,
             isBold: true,
             borderRadius: 20,

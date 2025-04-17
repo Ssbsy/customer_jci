@@ -1,5 +1,6 @@
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/globals.dart' as globals;
+import 'package:jci_worldcon_customer/core/constants/assets.dart';
 import 'package:jci_worldcon_customer/presentations/buy_ticket_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -82,20 +83,12 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 30.0),
-                      child: Image.asset(
-                        'assets/logo/jci_worldcon_logo.png',
-                        height: 80,
-                        width: 80,
-                      ),
+                      child: Assets.jciWorldConLogo,
                     ),
                     if (globals.isLoggedIn)
                       Row(
                         children: [
-                          Image.asset(
-                            'assets/icons/profile_icon.png',
-                            height: 30,
-                            fit: BoxFit.contain,
-                          ),
+                          Assets.profileIcon,
                           Builder(
                             builder: (context) {
                               return IconButton(

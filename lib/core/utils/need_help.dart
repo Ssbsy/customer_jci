@@ -1,6 +1,7 @@
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:jci_worldcon_customer/core/constants/assets.dart';
 
 class NeedHelp extends StatelessWidget {
   const NeedHelp({super.key});
@@ -50,19 +51,11 @@ class NeedHelp extends StatelessWidget {
           ),
         ),
         const Gap(30),
-        Image.asset(
-          'assets/icons/location_icon_JCI_homepage.png',
-          height: 40,
-          fit: BoxFit.cover,
-        ),
+        Assets.locationIconJciHomepage,
         const Gap(15),
         CustomText(title: 'Clark, Pampanga', fontSize: 16),
         const Gap(25),
-        Image.asset(
-          'assets/icons/call_icon_homepage.png',
-          height: 40,
-          fit: BoxFit.cover,
-        ),
+        Assets.callIconHomepage,
         const Gap(10),
         Divider(
           thickness: 5,
@@ -71,11 +64,7 @@ class NeedHelp extends StatelessWidget {
           endIndent: 120,
         ),
         const Gap(25),
-        Image.asset(
-          'assets/icons/message_icon_homepage.png',
-          height: 40,
-          fit: BoxFit.cover,
-        ),
+        Assets.messageIconHomepage,
         const Gap(10),
         Divider(
           thickness: 5,
@@ -84,19 +73,16 @@ class NeedHelp extends StatelessWidget {
           endIndent: 120,
         ),
         const Gap(25),
-        Image.asset('assets/images/clark_map.png', fit: BoxFit.cover),
+        Assets.clarkMap,
         const Gap(25),
         Row(
           spacing: 15,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/icons/twitter.png', fit: BoxFit.cover),
-
-            Image.asset('assets/icons/facebook.png', fit: BoxFit.cover),
-
-            Image.asset('assets/icons/instagram.png', fit: BoxFit.cover),
-
-            Image.asset('assets/icons/whats_app.png', fit: BoxFit.cover),
+            Assets.twitter,
+            Assets.facebook,
+            Assets.instagram,
+            Assets.whatsApp,
           ],
         ),
       ],

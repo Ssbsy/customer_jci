@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:jci_worldcon_customer/presentations/shop_page.dart';
 
 class EndDrawerWidget extends StatefulWidget {
   const EndDrawerWidget({Key? key}) : super(key: key);
@@ -69,6 +70,7 @@ class _EndDrawerWidgetState extends State<EndDrawerWidget> {
             'Shop',
             onTap: () {
               Navigator.pop(context);
+              Get.to(() => const ShopPage());
             },
           ),
           _action(

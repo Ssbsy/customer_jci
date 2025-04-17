@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jci_worldcon_customer/app/widgets/custom_widgets.dart'; // Import your CustomWidgets class
+import 'package:jci_worldcon_customer/app/widgets/custom_widgets.dart';
+import 'package:jci_worldcon_customer/core/constants/assets.dart'; // Import your CustomWidgets class
 
 class ForgotPasswordPage extends StatelessWidget {
   const ForgotPasswordPage({super.key});
@@ -10,12 +11,7 @@ class ForgotPasswordPage extends StatelessWidget {
       body: Stack(
         children: [
           // Background Image
-          SizedBox.expand(
-            child: Image.asset(
-              'assets/images/see_you_in_2026_bg.png',
-              fit: BoxFit.cover,
-            ),
-          ),
+          SizedBox.expand(child: Assets.seeYouIn2026),
 
           // Semi-transparent overlay
           Container(color: Colors.white.withOpacity(0.4)),
@@ -49,7 +45,7 @@ class ForgotPasswordPage extends StatelessWidget {
                           onPressed: () => Navigator.pop(context),
                         ),
                         const Spacer(),
-                        Image.asset('assets/logo/jci_logo_png.png', height: 70),
+                        Assets.jciLogoPng,
                       ],
                     ),
 
