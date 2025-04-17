@@ -1,7 +1,7 @@
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/globals.dart' as globals;
-import 'package:jci_worldcon_customer/presentations/pages/login_page.dart';
-import 'package:jci_worldcon_customer/presentations/pages/register_page.dart';
+import 'package:jci_worldcon_customer/presentations/login_page.dart';
+import 'package:jci_worldcon_customer/presentations/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';

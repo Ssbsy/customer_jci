@@ -1,6 +1,6 @@
 import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
-import 'package:jci_worldcon_customer/presentations/pages/register_page.dart';
+import 'package:jci_worldcon_customer/presentations/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';

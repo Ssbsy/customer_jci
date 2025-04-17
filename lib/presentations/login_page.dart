@@ -1,5 +1,5 @@
 import 'package:jci_worldcon_customer/app/globals.dart' as globals;
-import 'package:jci_worldcon_customer/presentations/pages/home_page.dart';
+import 'package:jci_worldcon_customer/presentations/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';

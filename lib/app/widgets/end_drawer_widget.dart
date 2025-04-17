@@ -1,9 +1,9 @@
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/globals.dart' as globals;
-import 'package:jci_worldcon_customer/presentations/pages/buy_ticket_page.dart';
-import 'package:jci_worldcon_customer/presentations/pages/home_page.dart';
-import 'package:jci_worldcon_customer/presentations/pages/link_ticket_page.dart';
-import 'package:jci_worldcon_customer/presentations/pages/profile_page.dart';
+import 'package:jci_worldcon_customer/presentations/buy_ticket_page.dart';
+import 'package:jci_worldcon_customer/presentations/home_page.dart';
+import 'package:jci_worldcon_customer/presentations/link_ticket_page.dart';
+import 'package:jci_worldcon_customer/presentations/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
