@@ -3,7 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
-import 'package:jci_worldcon_customer/presentations/product.dart';
+import 'package:jci_worldcon_customer/presentations/product_page.dart';
 import 'package:jci_worldcon_customer/core/utils/product_variants.dart';
 
 class Shop extends StatelessWidget {
