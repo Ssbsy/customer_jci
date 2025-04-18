@@ -13,7 +13,7 @@ class Shop extends StatelessWidget {
       children: [
         _card(
           context,
-          'assets/images/white_tumbler_1.png',
+          'assets/images/white_hoodie.png',
           'Hoodie',
           'Available: 150',
           () {},
