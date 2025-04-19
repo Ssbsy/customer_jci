@@ -97,4 +97,31 @@ class Assets {
     'assets/images/see_you_in_2026_bg.png',
     fit: BoxFit.cover,
   );
+
+  static final ihotelLogoBlue = Image.asset(
+    'assets/logo/ihotel_logo.png',
+    height: 30,
+    fit: BoxFit.cover,
+  );
+
+  static final phLogo = Image.asset(
+    'assets/logo/ph_logo-removebg-preview.png',
+    height: 20,
+    fit: BoxFit.contain,
+  );
+
+  static final worldConIagTraining = Image.asset(
+    'assets/images/worldCon _IAG_Training.png',
+  );
+
+  static final hotelO1 = Image.asset('assets/images/hotel_01.png');
+
+  static final ihotelLogoWhite = Image.asset(
+    'assets/logo/ihotel_logo_white.png',
+  );
+
+  static final shareLocationIcon = Image.asset(
+    'assets/icons/share_location_icon.png',
+    fit: BoxFit.contain,
+  );
 }

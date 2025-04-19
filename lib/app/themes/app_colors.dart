@@ -8,4 +8,8 @@ class AppColors {
   static const mutedPurple = Color(0xFF767992);
   static const alertRed = Color(0xFFE0401E);
   static const black = Colors.black;
+  static const darkGray = Color(0xFF444444);
+  static const mutedBluishGray = Color(0xFF767992);
+  static const darkBluishGray = Color(0xFF33414A);
+  static const mediumBlue = Color(0xFF4183C4);
 }
