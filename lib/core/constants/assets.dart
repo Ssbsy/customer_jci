@@ -124,4 +124,10 @@ class Assets {
     'assets/icons/share_location_icon.png',
     fit: BoxFit.contain,
   );
+
+  static final phoneLogo = Image.asset('assets/logo/phone_logo.png');
+
+  static final messageLogo = Image.asset('assets/logo/message_logo.png');
+
+  static final whatsAppLogo = Image.asset('assets/logo/whatsApp_logo.png');
 }

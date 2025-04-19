@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_app_bar.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
 import 'package:jci_worldcon_customer/core/blueprints/hotel.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
 import 'package:jci_worldcon_customer/core/constants/texts.dart';
+import 'package:jci_worldcon_customer/core/utils/hotel_booking_contacts.dart';
 import 'package:jci_worldcon_customer/core/utils/review_stars.dart';
-import 'package:ionicons/ionicons.dart';
 
 class HotelBookingPage extends StatelessWidget {
   final Hotel hotel;
@@ -58,6 +59,17 @@ class HotelBookingPage extends StatelessWidget {
                       maxLines: 5,
                     ),
                   ),
+                ],
+              ),
+              const HotelBookingContacts(),
+
+              const Gap(15),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  CustomButton(text: 'Book Now', onTap: () {}),
+                  CustomButton(text: 'Call Now', onTap: () {}),
                 ],
               ),
             ],

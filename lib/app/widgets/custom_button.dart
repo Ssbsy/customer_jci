@@ -9,6 +9,7 @@ class CustomButton extends StatelessWidget {
   final bool isBold;
   final VoidCallback onTap;
   final double padding;
+  final double containerWidth;
   const CustomButton({
     super.key,
     required this.text,
@@ -19,6 +20,7 @@ class CustomButton extends StatelessWidget {
     this.isBold = false,
     this.padding = 15,
     required this.onTap,
+    this.containerWidth = double.infinity,
   });
 
   @override
@@ -26,7 +28,7 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: double.infinity,
+        width: containerWidth,
         padding: EdgeInsets.all(padding),
         decoration: BoxDecoration(
           color: containerColor,
