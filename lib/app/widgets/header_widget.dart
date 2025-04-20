@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:jci_worldcon_customer/presentations/profile_page.dart';
 
 class HeaderWidget extends StatefulWidget {
   const HeaderWidget({super.key});
@@ -88,7 +89,10 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                     if (globals.isLoggedIn)
                       Row(
                         children: [
-                          Assets.profileIcon,
+                          GestureDetector(
+                            onTap: () => Get.to(() => const ProfilePage()),
+                            child: Assets.profileIcon,
+                          ),
                           Builder(
                             builder: (context) {
                               return IconButton(

@@ -14,32 +14,30 @@ class HotelPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
+      appBar: HotelPageHeader(),
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HotelPageHeader(),
             const Gap(10),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Assets.worldConIagTraining,
-                    const Gap(20),
-                    CustomText(
-                      title: 'Hotels',
-                      textColor: AppColors.darkGray,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
-                    ),
-                    const Gap(20),
-                    Hotels(),
-                    const FooterWidget(),
-                  ],
-                ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                children: [
+                  Assets.worldConIagTraining,
+                  const Gap(20),
+                  CustomText(
+                    title: 'Hotels',
+                    textColor: AppColors.darkGray,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  ),
+                  const Gap(20),
+                  Hotels(),
+                ],
               ),
             ),
+            const FooterWidget(),
           ],
         ),
       ),

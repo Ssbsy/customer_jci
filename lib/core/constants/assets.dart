@@ -114,7 +114,13 @@ class Assets {
     'assets/images/worldCon _IAG_Training.png',
   );
 
-  static final hotelO1 = Image.asset('assets/images/hotel_01.png');
+  static final hotel01 = Image.asset('assets/images/hotel_01.png');
+
+  static final hotel02 = Image.asset('assets/images/hotel_02.png');
+
+  static final hotel03 = Image.asset('assets/images/hotel_03.png');
+
+  static final hotel04 = Image.asset('assets/images/hotel_04.png');
 
   static final ihotelLogoWhite = Image.asset(
     'assets/logo/ihotel_logo_white.png',
@@ -130,4 +136,18 @@ class Assets {
   static final messageLogo = Image.asset('assets/logo/message_logo.png');
 
   static final whatsAppLogo = Image.asset('assets/logo/whatsApp_logo.png');
+
+  static final mapView = Image.asset('assets/images/map_view.png');
+
+  static final twinGuestRoomPoolView = Image.asset(
+    'assets/images/twin_guest_room_pool_view.png',
+  );
+
+  static final kingOneBedroomSuiteWithBalcony = Image.asset(
+    'assets/images/king_one_bedroom_suite_with_balcony.png',
+  );
+
+  static final kingTwoBedroomGovernorSuite = Image.asset(
+    'assets/images/king_two_bedroom_governor_suite.png',
+  );
 }

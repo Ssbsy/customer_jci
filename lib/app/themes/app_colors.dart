@@ -12,4 +12,5 @@ class AppColors {
   static const mutedBluishGray = Color(0xFF767992);
   static const darkBluishGray = Color(0xFF33414A);
   static const mediumBlue = Color(0xFF4183C4);
+  static const mediumGreen = Color(0xFF21BA45);
 }

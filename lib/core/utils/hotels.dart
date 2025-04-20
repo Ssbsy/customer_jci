@@ -4,30 +4,38 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/core/blueprints/hotel.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
-import 'package:jci_worldcon_customer/core/utils/review_stars.dart';
+import 'package:jci_worldcon_customer/app/widgets/review_stars.dart';
 import 'package:jci_worldcon_customer/presentations/hotel_booking_page.dart';
 
 class Hotels extends StatelessWidget {
-  Hotels({super.key});
+  final bool isInsideHotelPage;
+  final Hotel? excludeHotel;
+  Hotels({super.key, this.isInsideHotelPage = false, this.excludeHotel});
 
   final List<Hotel> hotels = [
     Hotel(
-      hotelImage: Assets.hotelO1,
+      hotelImage: Assets.hotel01,
       location: 'Pampanga, Philippines',
       hotelName: 'Hilton Clark Sun Valley',
       price: 2218.52,
     ),
     Hotel(
-      hotelImage: Assets.hotelO1,
+      hotelImage: Assets.hotel02,
       location: 'Pampanga, Philippines',
       hotelName: 'Swissôtel Clark',
-      price: 1890.75,
+      price: 139.42,
     ),
     Hotel(
-      hotelImage: Assets.hotelO1,
+      hotelImage: Assets.hotel03,
       location: 'Pampanga, Philippines',
       hotelName: 'Clark Marriott Hotel',
-      price: 1450.00,
+      price: 139.42,
+    ),
+    Hotel(
+      hotelImage: Assets.hotel04,
+      location: 'Pampanga, Philippines',
+      hotelName: 'Royce Hotel and Casino',
+      price: 118.15,
     ),
   ];
 
@@ -42,8 +50,16 @@ class Hotels extends StatelessWidget {
   }
 
   Widget _buildHotelCard(BuildContext context, Hotel hotel) {
+    if (excludeHotel != null && hotel.hotelName == excludeHotel!.hotelName) {
+      return const SizedBox.shrink();
+    }
+
     return GestureDetector(
-      onTap: () => Get.to(() => HotelBookingPage(hotel: hotel)),
+      onTap: () {
+        if (!isInsideHotelPage) {
+          Get.to(() => HotelBookingPage(hotel: hotel));
+        }
+      },
       child: Container(
         width: double.infinity,
         padding: const EdgeInsets.all(15),
@@ -51,13 +67,13 @@ class Hotels extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15),
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.black12,
-              blurRadius: 6,
-              offset: Offset(0, 3),
-            ),
-          ],
+          // boxShadow: const [
+          //   BoxShadow(
+          //     color: Colors.black12,
+          //     blurRadius: 6,
+          //     offset: Offset(0, 3),
+          //   ),
+          // ],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -17,6 +17,7 @@ dependencies:
   google_fonts: ^6.2.1
   get: ^4.7.2
   ionicons: ^0.2.2
+  readmore: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -28,7 +29,12 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
+    - assets/fonts/
     - assets/icons/
     - assets/images/
     - assets/logo/
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
