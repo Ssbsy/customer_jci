@@ -13,7 +13,9 @@ class Assets {
     fit: BoxFit.contain,
   );
 
-  static final homeBackground01 = Image.asset('assets/home_background_01.png');
+  static final homeBackground01 = Image.asset(
+    'assets/images/home_background_01.png',
+  );
 
   static final calendarIcon = Image.asset(
     'assets/icons/calendar_icon.png',
@@ -149,5 +151,36 @@ class Assets {
 
   static final kingTwoBedroomGovernorSuite = Image.asset(
     'assets/images/king_two_bedroom_governor_suite.png',
+  );
+
+  static final faqBackgroundPhoto = Image.asset(
+    'assets/images/faq_bg_photo.png',
+  );
+
+  static final mapArrivingIcon = Image.asset(
+    'assets/icons/map_arriving_icon.png',
+  );
+
+  static final mapPagePhoto = Image.asset(
+    'assets/images/map_page_photo.png',
+    fit: BoxFit.cover,
+  );
+
+  static final laSavillaPhoto = Image.asset(
+    'assets/images/la_sevilla_photo.png',
+  );
+
+  static final richardLimJrPhoto = Image.asset(
+    'assets/images/richard_lim_jr_photo.png',
+  );
+
+  static final footerLogo = Image.asset(
+    'assets/logo/footer_logo_png.png',
+    fit: BoxFit.cover,
+  );
+
+  static final qrImage = Image.asset(
+    'assets/images/qr_img.png',
+    fit: BoxFit.cover,
   );
 }

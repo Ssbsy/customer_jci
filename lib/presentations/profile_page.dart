@@ -6,6 +6,7 @@ import 'package:jci_worldcon_customer/app/widgets/header_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/core/utils/profile_page_about_me.dart';
+import 'package:jci_worldcon_customer/core/utils/profile_qr.dart';
 import 'package:jci_worldcon_customer/presentations/edit_profile_page.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -51,55 +52,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   const Gap(25),
-                  Stack(
-                    alignment: Alignment.topCenter,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 50.0),
-                        child: Card(
-                          margin: const EdgeInsets.symmetric(horizontal: 20),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(
-                              top: 60.0,
-                              bottom: 20.0,
-                            ),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                CustomText(title: 'Smith'),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    CustomText(title: '@John'),
-                                    const Icon(
-                                      Icons.verified,
-                                      color: Colors.blue,
-                                    ),
-                                  ],
-                                ),
-                                const Gap(10),
-                                Image.asset(
-                                  'assets/images/qr_img.png',
-                                  fit: BoxFit.cover,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        top: 0,
-                        child: Image.asset(
-                          'assets/icons/profile_pic.png',
-                          width: 100,
-                          height: 100,
-                        ),
-                      ),
-                    ],
-                  ),
+                  const ProfileQr(),
                   const Gap(20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

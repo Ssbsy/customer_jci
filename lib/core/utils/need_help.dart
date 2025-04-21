@@ -1,7 +1,12 @@
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
+import 'package:jci_worldcon_customer/presentations/lets_chat_page.dart';
 
 class NeedHelp extends StatelessWidget {
   const NeedHelp({super.key});
@@ -31,19 +36,17 @@ class NeedHelp extends StatelessWidget {
                     isCentered: true,
                   ),
                   const Gap(20),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 10,
-                      horizontal: 35,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFE0401E),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: CustomText(
-                      title: "Let's Chat",
-                      textColor: Colors.white,
-                    ),
+                  CustomButton(
+                    containerWidth: MediaQuery.of(context).size.width * 0.4,
+                    text: "Let's Chat",
+                    textColor: Colors.white,
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Get.to(() => const LetsChatPage());
+                    },
+                    borderColor: AppColors.alertRed,
+                    containerColor: AppColors.alertRed,
+                    borderRadius: 20,
                   ),
                 ],
               ),

@@ -2,7 +2,7 @@ import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/footer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/header_widget.dart';
 import 'package:jci_worldcon_customer/app/globals.dart' as globals;
-import 'package:jci_worldcon_customer/core/utils/jci_world_congress_2026.dart';
+import 'package:jci_worldcon_customer/core/utils/home_page/jci_world_congress_2026.dart';
 import 'package:jci_worldcon_customer/core/utils/explore_our_products.dart';
 import 'package:jci_worldcon_customer/core/utils/frequently_asked_questions.dart';
 import 'package:jci_worldcon_customer/core/utils/highlights_register_now.dart';
