@@ -1,0 +1,102 @@
+import 'package:flutter/material.dart';
+import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_text_field.dart';
+import 'package:jci_worldcon_customer/app/globals.dart' as globals;
+
+class AccountSettingsTextFields extends StatefulWidget {
+  const AccountSettingsTextFields({super.key});
+
+  @override
+  State<AccountSettingsTextFields> createState() =>
+      _AccountSettingsTextFieldsState();
+}
+
+class _AccountSettingsTextFieldsState extends State<AccountSettingsTextFields> {
+  final _controller = TextEditingController();
+  final _oldPasswordController = TextEditingController();
+  final _newPasswordController = TextEditingController();
+  final _confirmNewPasswordController = TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child:
+          globals.isChangePassword ? _changePassword(context) : _email(context),
+    );
+  }
+
+  Column _email(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        CustomText(title: 'Email', fontWeight: FontWeight.bold, fontSize: 16),
+        const SizedBox(height: 10),
+        CustomTextField(controller: _controller, hintText: 'Email'),
+        const SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CustomButton(
+              padding: 10,
+              containerWidth: MediaQuery.of(context).size.width * 0.3,
+              text: 'Save Changes',
+              onTap: () {},
+              textSize: 14,
+              textColor: AppColors.white,
+              containerColor: AppColors.alertRed,
+              borderColor: AppColors.alertRed,
+              borderRadius: 22,
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Column _changePassword(BuildContext context) {
+    return Column(
+      spacing: 10,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _changePasswordTextFields('Old password', _oldPasswordController),
+        _changePasswordTextFields('New password', _newPasswordController),
+        _changePasswordTextFields(
+          'Confirm new password',
+          _confirmNewPasswordController,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CustomButton(
+              padding: 10,
+              containerWidth: MediaQuery.of(context).size.width * 0.3,
+              text: 'Save Changes',
+              onTap: () {},
+              textSize: 14,
+              textColor: AppColors.white,
+              containerColor: AppColors.alertRed,
+              borderColor: AppColors.alertRed,
+              borderRadius: 22,
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Column _changePasswordTextFields(
+    String title,
+    TextEditingController controller,
+  ) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      spacing: 5,
+      children: [
+        CustomText(title: title, fontWeight: FontWeight.bold, fontSize: 16),
+        CustomTextField(controller: _controller, hintText: title),
+      ],
+    );
+  }
+}

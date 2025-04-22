@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/header_widget.dart';
-import 'package:jci_worldcon_customer/core/utils/profile_qr.dart';
+import 'package:jci_worldcon_customer/core/utils/profile/profile_qr.dart';
 
 class QrCodePage extends StatelessWidget {
   final Widget? optionalCard;

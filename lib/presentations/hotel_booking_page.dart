@@ -5,7 +5,7 @@ import 'package:jci_worldcon_customer/app/widgets/custom_app_bar.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/footer_widget.dart';
-import 'package:jci_worldcon_customer/core/blueprints/hotel.dart';
+import 'package:jci_worldcon_customer/core/models/hotel.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
 import 'package:jci_worldcon_customer/core/constants/texts.dart';
 import 'package:jci_worldcon_customer/core/utils/hotel_booking_available_room.dart';

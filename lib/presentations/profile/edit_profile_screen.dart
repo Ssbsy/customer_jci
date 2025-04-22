@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
-import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
-import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/header_widget.dart';
-import 'package:jci_worldcon_customer/core/utils/edit_profile_photo.dart';
+import 'package:jci_worldcon_customer/core/utils/profile/edit_profile_photo.dart';
 
-class EditProfilePage extends StatelessWidget {
-  const EditProfilePage({super.key});
+class EditProfileScreen extends StatelessWidget {
+  const EditProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
-import 'package:jci_worldcon_customer/core/blueprints/hotel.dart';
+import 'package:jci_worldcon_customer/core/models/hotel.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
 import 'package:jci_worldcon_customer/app/widgets/review_stars.dart';
 import 'package:jci_worldcon_customer/presentations/hotel_booking_page.dart';

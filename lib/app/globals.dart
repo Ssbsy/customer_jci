@@ -8,3 +8,5 @@ Future<void> refreshPage(State state) async {
   await Future.delayed(const Duration(milliseconds: 500));
   state.setState(() {});
 }
+
+bool isChangePassword = false;

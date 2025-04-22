@@ -6,8 +6,9 @@ import 'package:jci_worldcon_customer/app/widgets/header_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/core/utils/profile_page_about_me.dart';
-import 'package:jci_worldcon_customer/core/utils/profile_qr.dart';
-import 'package:jci_worldcon_customer/presentations/edit_profile_page.dart';
+import 'package:jci_worldcon_customer/core/utils/profile/profile_qr.dart';
+import 'package:jci_worldcon_customer/presentations/profile/account_settings_screen.dart';
+import 'package:jci_worldcon_customer/presentations/profile/edit_profile_screen.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -60,11 +61,15 @@ class ProfilePage extends StatelessWidget {
                       _containerUnderQR(
                         'Edit profile',
                         icon: const Icon(Icons.edit, size: 16),
-                        onTap: () => Get.to(() => const EditProfilePage()),
+                        onTap: () => Get.to(() => const EditProfileScreen()),
                       ),
-                      const SizedBox(width: 10),
-                      _containerUnderQR('Account Settings'),
-                      const SizedBox(width: 10),
+                      const Gap(10),
+                      _containerUnderQR(
+                        'Account Settings',
+                        onTap:
+                            () => Get.to(() => const AccountSettingsScreen()),
+                      ),
+                      const Gap(10),
                       _containerUnderQR('Orders'),
                     ],
                   ),

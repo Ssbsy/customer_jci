@@ -7,7 +7,7 @@ import 'package:jci_worldcon_customer/presentations/home_page.dart';
 import 'package:jci_worldcon_customer/presentations/hotel_page.dart';
 import 'package:jci_worldcon_customer/presentations/link_ticket_page.dart';
 import 'package:jci_worldcon_customer/presentations/map_page.dart';
-import 'package:jci_worldcon_customer/presentations/profile_page.dart';
+import 'package:jci_worldcon_customer/presentations/profile/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
