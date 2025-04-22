@@ -10,3 +10,5 @@ Future<void> refreshPage(State state) async {
 }
 
 bool isChangePassword = false;
+
+bool isDeleteAccount = false;

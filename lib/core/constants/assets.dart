@@ -183,4 +183,10 @@ class Assets {
     'assets/images/qr_img.png',
     fit: BoxFit.cover,
   );
+
+  static final ordersImg = Image.asset('assets/images/orders_img.png');
+
+  static final ordersScreenTicketImg = Image.asset(
+    'assets/images/orders_screen_ticket_img.png',
+  );
 }

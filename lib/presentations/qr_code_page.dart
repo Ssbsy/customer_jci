@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_floating_action_bar.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/header_widget.dart';
@@ -34,6 +35,7 @@ class QrCodePage extends StatelessWidget {
         ],
       ),
       endDrawer: const EndDrawerWidget(),
+      floatingActionButton: CustomFloatingActionBar(),
     );
   }
 

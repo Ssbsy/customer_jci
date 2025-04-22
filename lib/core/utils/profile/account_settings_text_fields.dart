@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text_field.dart';
 import 'package:jci_worldcon_customer/app/globals.dart' as globals;
+import 'package:jci_worldcon_customer/core/constants/texts.dart';
 
 class AccountSettingsTextFields extends StatefulWidget {
   const AccountSettingsTextFields({super.key});
@@ -22,8 +24,21 @@ class _AccountSettingsTextFieldsState extends State<AccountSettingsTextFields> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child:
-          globals.isChangePassword ? _changePassword(context) : _email(context),
+      child: Builder(
+        builder: (context) {
+          if (globals.isChangePassword) {
+            return _changePassword(context);
+          } else if (globals.isDeleteAccount) {
+            return _deleteAccountField(
+              'Enter your password to confirm',
+              'Password',
+              _controller,
+            );
+          } else {
+            return _email(context);
+          }
+        },
+      ),
     );
   }
 
@@ -66,6 +81,7 @@ class _AccountSettingsTextFieldsState extends State<AccountSettingsTextFields> {
           'Confirm new password',
           _confirmNewPasswordController,
         ),
+        const Gap(5),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -97,6 +113,40 @@ class _AccountSettingsTextFieldsState extends State<AccountSettingsTextFields> {
         CustomText(title: title, fontWeight: FontWeight.bold, fontSize: 16),
         CustomTextField(controller: _controller, hintText: title),
       ],
+    );
+  }
+
+  Expanded _deleteAccountField(
+    String title,
+    String hint,
+    TextEditingController controller,
+  ) {
+    return Expanded(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: 15,
+        children: [
+          CustomText(title: Texts.accountsettingsDeleteAccount, maxLines: 10),
+          CustomText(title: title, fontWeight: FontWeight.bold, fontSize: 16),
+          CustomTextField(controller: _controller, hintText: hint),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              CustomButton(
+                padding: 10,
+                containerWidth: MediaQuery.of(context).size.width * 0.3,
+                text: 'Save Changes',
+                onTap: () {},
+                textSize: 14,
+                textColor: AppColors.white,
+                containerColor: AppColors.alertRed,
+                borderColor: AppColors.alertRed,
+                borderRadius: 22,
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

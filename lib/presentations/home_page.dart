@@ -1,7 +1,9 @@
+import 'package:jci_worldcon_customer/app/widgets/custom_floating_action_bar.dart';
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/footer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/header_widget.dart';
 import 'package:jci_worldcon_customer/app/globals.dart' as globals;
+import 'package:jci_worldcon_customer/app/widgets/navigation_widget.dart';
 import 'package:jci_worldcon_customer/core/utils/home_page/jci_world_congress_2026.dart';
 import 'package:jci_worldcon_customer/core/utils/home_page/explore_our_products.dart';
 import 'package:jci_worldcon_customer/core/utils/home_page/frequently_asked_questions.dart';
@@ -29,6 +31,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           HeaderWidget(),
+          if (globals.isLoggedIn) const NavigationWidget(),
 
           Expanded(
             child: RefreshIndicator(
@@ -65,6 +68,8 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       endDrawer: const EndDrawerWidget(),
+      floatingActionButton:
+          globals.isLoggedIn ? CustomFloatingActionBar() : null,
     );
   }
 }

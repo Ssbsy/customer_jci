@@ -71,44 +71,41 @@ class _HeaderWidgetState extends State<HeaderWidget> {
             ],
           ),
         ),
-        Card(
-          elevation: 1,
-          child: Container(
-            width: double.infinity,
-            decoration: const BoxDecoration(color: Colors.white),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 30.0),
-                      child: Assets.jciWorldConLogo,
+        Container(
+          width: double.infinity,
+          decoration: const BoxDecoration(color: Colors.white),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Assets.jciWorldConLogo,
+                  ),
+                  if (globals.isLoggedIn)
+                    Row(
+                      children: [
+                        GestureDetector(
+                          onTap: () => Get.to(() => const QrCodePage()),
+                          child: Assets.profileIcon,
+                        ),
+                        Builder(
+                          builder: (context) {
+                            return IconButton(
+                              onPressed: () {
+                                Scaffold.of(context).openEndDrawer();
+                              },
+                              icon: Icon(Icons.menu, size: 30, weight: 2),
+                            );
+                          },
+                        ),
+                      ],
                     ),
-                    if (globals.isLoggedIn)
-                      Row(
-                        children: [
-                          GestureDetector(
-                            onTap: () => Get.to(() => const QrCodePage()),
-                            child: Assets.profileIcon,
-                          ),
-                          Builder(
-                            builder: (context) {
-                              return IconButton(
-                                onPressed: () {
-                                  Scaffold.of(context).openEndDrawer();
-                                },
-                                icon: Icon(Icons.menu, size: 30, weight: 2),
-                              );
-                            },
-                          ),
-                        ],
-                      ),
-                  ],
-                ),
-              ],
-            ),
+                ],
+              ),
+            ],
           ),
         ),
       ],

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
-import 'package:jci_worldcon_customer/core/constants/assets.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class ProfileQr extends StatelessWidget {

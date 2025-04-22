@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
+import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 
 class CustomFloatingActionBar extends StatefulWidget {
   const CustomFloatingActionBar({super.key});
@@ -11,10 +13,11 @@ class CustomFloatingActionBar extends StatefulWidget {
 class _CustomFloatingActionBarState extends State<CustomFloatingActionBar> {
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton.extended(
+    return FloatingActionButton(
       onPressed: () {},
-      icon: Icon(Icons.message),
-      label: Text('Contact'),
+      backgroundColor: AppColors.alertRed,
+      child: Icon(Icons.chat_bubble, color: AppColors.white),
+      elevation: 4,
     );
   }
 }

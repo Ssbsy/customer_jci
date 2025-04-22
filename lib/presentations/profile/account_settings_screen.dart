@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_floating_action_bar.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/footer_widget.dart';
@@ -26,6 +27,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
   @override
   void dispose() {
     globals.isChangePassword = false;
+    globals.isDeleteAccount = false;
     super.dispose();
   }
 
@@ -51,9 +53,12 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                         children: [
                           _text(
                             'General',
-                            isBold: !globals.isChangePassword,
+                            isBold:
+                                !globals.isChangePassword &&
+                                !globals.isDeleteAccount,
                             onTap: () {
                               globals.isChangePassword = false;
+                              globals.isDeleteAccount = false;
                               setState(() {});
                               debugPrint('clicked');
                             },
@@ -63,13 +68,19 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                             isBold: globals.isChangePassword,
                             onTap: () {
                               globals.isChangePassword = true;
+                              globals.isDeleteAccount = false;
                               setState(() {});
                               debugPrint('clicked');
                             },
                           ),
                           _text(
                             'Delete Account',
-                            onTap: () {},
+                            isBold: globals.isDeleteAccount,
+                            onTap: () {
+                              globals.isDeleteAccount = true;
+                              globals.isChangePassword = false;
+                              setState(() {});
+                            },
                             color: AppColors.alertRed,
                           ),
                         ],

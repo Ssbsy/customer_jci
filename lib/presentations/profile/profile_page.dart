@@ -9,6 +9,7 @@ import 'package:jci_worldcon_customer/core/utils/profile_page_about_me.dart';
 import 'package:jci_worldcon_customer/core/utils/profile/profile_qr.dart';
 import 'package:jci_worldcon_customer/presentations/profile/account_settings_screen.dart';
 import 'package:jci_worldcon_customer/presentations/profile/edit_profile_screen.dart';
+import 'package:jci_worldcon_customer/presentations/profile/orders_screen.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -70,7 +71,10 @@ class ProfilePage extends StatelessWidget {
                             () => Get.to(() => const AccountSettingsScreen()),
                       ),
                       const Gap(10),
-                      _containerUnderQR('Orders'),
+                      _containerUnderQR(
+                        'Orders',
+                        onTap: () => Get.to(() => const OrdersScreen()),
+                      ),
                     ],
                   ),
                   const Gap(20),
