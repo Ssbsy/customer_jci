@@ -1,23 +1,38 @@
 import 'package:flutter/material.dart';
+import 'payment_gcash_page.dart';
 
 class PaymentMethods extends StatelessWidget {
-  const PaymentMethods({super.key});
+  final String productName;
+  final double productPrice;
+
+  const PaymentMethods({
+    super.key,
+    required this.productName,
+    required this.productPrice,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10),
-          child: Text(
-            'Payment methods',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder:
+                    (context) => PaymentGCashPage(
+                      productName: productName,
+                      productPrice: productPrice,
+                    ),
+              ),
+            );
+          },
+          child: _singleLogoBox(
+            'assets/logo/gcash_logo.png',
+            alignment: MainAxisAlignment.start,
           ),
-        ),
-        _singleLogoBox(
-          'assets/logo/gcash_logo.png',
-          alignment: MainAxisAlignment.start,
         ),
         _singleLogoBox(
           'assets/logo/maya_logo.png',

@@ -50,15 +50,9 @@ class _ProductWidgetState extends State<ProductWidget> {
 
   @override
   Widget build(BuildContext context) {
-    // Get selected variant image and color
-    // final selectedVariant = widget.variants[_selectedVariantIndex];
-    // final variantImage = selectedVariant['image'];
-    // final variantColor = selectedVariant['color'];
-
     return Column(
       children: [
         Gap(20),
-
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 15),
           padding: const EdgeInsets.all(15),
@@ -95,7 +89,6 @@ class _ProductWidgetState extends State<ProductWidget> {
                 ),
               ),
               Gap(15),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(widget.variants.length, (index) {
@@ -187,7 +180,8 @@ class _ProductWidgetState extends State<ProductWidget> {
           ),
         ),
         Gap(25),
-        const PaymentMethods(),
+        PaymentMethods(productName: widget.name, productPrice: widget.price),
+
         Gap(30),
       ],
     );

@@ -118,11 +118,7 @@ class Shop extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset(
-              image,
-              height: 200,
-              fit: BoxFit.cover,
-            ), // Reduce height if needed
+            Image.asset(image, height: 200, fit: BoxFit.cover),
             if (variants.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
