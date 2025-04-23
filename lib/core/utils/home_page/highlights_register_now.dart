@@ -1,6 +1,7 @@
 import 'package:jci_worldcon_customer/app/globals.dart' as globals;
 import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
+import 'package:jci_worldcon_customer/core/constants/texts.dart';
 import 'package:jci_worldcon_customer/presentations/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -25,20 +26,21 @@ class HighlightsRegisterNow extends StatelessWidget {
         children: [
           CustomText(
             title: "IT’S TIME TO MAKE GREAT THINGS HAPPEN!",
-            fontSize: 30,
+            fontSize: 22,
             fontWeight: FontWeight.bold,
             textColor: Colors.white,
-            maxLines: 2,
+            maxLines: 10,
           ),
           const Gap(10),
           CustomText(
-            title:
-                "We are bringing the world to the Philippines! Join us in Clark, Pampanga for an unforgettable experience where over 6,000 delegates from 120+ countries unite to shape the future of leadership, innovation, and global impact.",
+            title: Texts.highLightsRegisterNowDescription,
+            fontSize: 14,
             textColor: Colors.white,
             isJustified: true,
-            maxLines: 5,
+            maxLines: 10,
+            fontWeight: FontWeight.w300,
           ),
-          const Gap(35),
+          const Gap(30),
           CustomButton(
             onTap: () => Get.to(const RegisterPage()),
             text: globals.isLoggedIn ? 'Buy Now' : 'Register Now',
@@ -52,6 +54,7 @@ class HighlightsRegisterNow extends StatelessWidget {
           _container(
             context,
             'assets/images/jci_world_congress_2026_bg.png',
+            height: MediaQuery.of(context).size.height * 0.3,
             "JCI WORLD CONGRESS 2026",
             "JCI Philippines is proud to host the 2026 JCI World Congress, bringing together young leaders to drive change, foster partnerships, and create lasting impact.",
           ),
@@ -59,6 +62,8 @@ class HighlightsRegisterNow extends StatelessWidget {
           _container(
             context,
             'assets/images/world_class_destination_bg.png',
+
+            height: MediaQuery.of(context).size.height * 0.32,
             "World-Class Destination",
             "Clark, Pampanga is a global hub for MICE events with:",
             subTextList: [
@@ -72,6 +77,7 @@ class HighlightsRegisterNow extends StatelessWidget {
           _container(
             context,
             'assets/images/an_unforgettable_experience_bg.png',
+            height: MediaQuery.of(context).size.height * 0.3,
             "An Unforgettable Experience",
             "From international artists and drone shows to cultural showcases, the 2026 JCI World Congress promises to be the biggest and most exciting yet!",
           ),
@@ -85,10 +91,11 @@ class HighlightsRegisterNow extends StatelessWidget {
     String _image,
     String title,
     String subTitle, {
+    double? height,
     List<String>? subTextList,
   }) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.3,
+      height: height ?? null,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(22),
@@ -113,7 +120,8 @@ class HighlightsRegisterNow extends StatelessWidget {
             const Gap(10),
             CustomText(
               title: subTitle,
-              fontSize: 13.5,
+              fontSize: 12,
+              maxLines: 10,
               isJustified: true,
               textColor: Colors.white,
             ),

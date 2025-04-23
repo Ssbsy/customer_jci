@@ -15,7 +15,7 @@ class ExploreOurProducts extends StatelessWidget {
           CustomText(
             title: "Explore Our Products",
             fontWeight: FontWeight.bold,
-            fontSize: 30,
+            fontSize: 24,
             textColor: Color(0xFF252B42),
           ),
           const Gap(15),
@@ -24,6 +24,8 @@ class ExploreOurProducts extends StatelessWidget {
                 "Get your limited edition World Congress 2026 event merchandise now! Show your support and commemorate the experience with our exclusive collection. Hurry, while supplies last!",
             textColor: Color(0xFF374754),
             isJustified: true,
+            maxLines: 10,
+            fontWeight: FontWeight.w300,
           ),
           const Gap(15),
           const Shop(),

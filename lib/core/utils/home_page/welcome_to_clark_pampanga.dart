@@ -19,7 +19,7 @@ class WelcomeToClarkPampanga extends StatelessWidget {
               padding: const EdgeInsets.only(top: 45.0),
               child: CustomText(
                 title: 'Welcome to Clark Pampanga!',
-                fontSize: 25,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
                 textColor: Color(0xFF252B42),
               ),

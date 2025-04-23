@@ -18,7 +18,7 @@ class AccountSettingsProfile extends StatelessWidget {
               border: Border.all(width: 1),
               borderRadius: BorderRadius.circular(52),
             ),
-            child: Icon(Icons.person, size: 70),
+            child: Icon(Icons.person, size: 50),
           ),
           Expanded(
             child: Column(
@@ -29,7 +29,6 @@ class AccountSettingsProfile extends StatelessWidget {
                     CustomText(
                       title: 'John Smith',
                       fontWeight: FontWeight.bold,
-                      fontSize: 18,
                     ),
                     CustomText(title: ' / General'),
                   ],
@@ -38,7 +37,7 @@ class AccountSettingsProfile extends StatelessWidget {
                 CustomText(
                   title: 'Update your username and manage your account',
                   maxLines: 3,
-                  fontSize: 16,
+                  fontSize: 12,
                 ),
               ],
             ),

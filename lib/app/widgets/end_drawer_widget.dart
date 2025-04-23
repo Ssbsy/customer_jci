@@ -24,86 +24,93 @@ class EndDrawerWidget extends StatefulWidget {
 class _EndDrawerWidgetState extends State<EndDrawerWidget> {
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 30),
-        children: <Widget>[
-          Image.asset('assets/logo/jci_worldcon_logo.png', fit: BoxFit.cover),
-          const Gap(25),
-          _action(
-            'Home',
-            onTap: () {
-              Navigator.pop(context);
-              Get.to(() => const HomePage());
-            },
-          ),
-          _action(
-            'Profile',
-            onTap: () {
-              Navigator.pop(context);
-              Get.to(() => ProfilePage());
-            },
-          ),
-          _action(
-            'Buy tickets',
-            onTap: () {
-              Navigator.pop(context);
-              Get.to(() => const BuyTicketPage());
-            },
-          ),
-          _action(
-            'Link tickets',
-            onTap: () {
-              Navigator.pop(context);
-              Get.to(() => const LinkTicketPage());
-            },
-          ),
-          _action(
-            'Hotel',
-            onTap: () {
-              Navigator.pop(context);
-              Get.to(() => const HotelPage());
-            },
-          ),
-          _action(
-            'Map',
-            onTap: () {
-              Navigator.pop(context);
-              Get.to(() => const MapPage());
-            },
-          ),
-          _action(
-            'Shop',
-            onTap: () {
-              Navigator.pop(context);
-              Get.to(() => const ShopPage());
-            },
-          ),
-          _action(
-            'FAQ',
-            onTap: () {
-              Navigator.pop(context);
-              Get.to(() => const FaqPage());
-            },
-          ),
-          _action(
-            'COC Team',
-            onTap: () {
-              Navigator.pop(context);
-              Get.to(() => const CocTeamPage());
-            },
-          ),
-          _action(
-            'Sign Out',
-            color: Colors.deepOrange.shade700,
-            textColor: Colors.white,
-            onTap: () {
-              globals.isLoggedIn = false;
-              Navigator.pop(context);
-              Get.to(() => HomePage());
-            },
-          ),
-        ],
+    return SizedBox(
+      width: MediaQuery.of(context).size.width * 0.7,
+      child: Drawer(
+        child: ListView(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          children: <Widget>[
+            Image.asset(
+              'assets/logo/jci_worldcon_logo.png',
+              fit: BoxFit.contain,
+              height: 100,
+            ),
+            const Gap(25),
+            _action(
+              'Home',
+              onTap: () {
+                Navigator.pop(context);
+                Get.to(() => const HomePage());
+              },
+            ),
+            _action(
+              'Profile',
+              onTap: () {
+                Navigator.pop(context);
+                Get.to(() => ProfilePage());
+              },
+            ),
+            _action(
+              'Buy tickets',
+              onTap: () {
+                Navigator.pop(context);
+                Get.to(() => const BuyTicketPage());
+              },
+            ),
+            _action(
+              'Link tickets',
+              onTap: () {
+                Navigator.pop(context);
+                Get.to(() => const LinkTicketPage());
+              },
+            ),
+            _action(
+              'Hotel',
+              onTap: () {
+                Navigator.pop(context);
+                Get.to(() => const HotelPage());
+              },
+            ),
+            _action(
+              'Map',
+              onTap: () {
+                Navigator.pop(context);
+                Get.to(() => const MapPage());
+              },
+            ),
+            _action(
+              'Shop',
+              onTap: () {
+                Navigator.pop(context);
+                Get.to(() => const ShopPage());
+              },
+            ),
+            _action(
+              'FAQ',
+              onTap: () {
+                Navigator.pop(context);
+                Get.to(() => const FaqPage());
+              },
+            ),
+            _action(
+              'COC Team',
+              onTap: () {
+                Navigator.pop(context);
+                Get.to(() => const CocTeamPage());
+              },
+            ),
+            _action(
+              'Sign Out',
+              color: Colors.deepOrange.shade700,
+              textColor: Colors.white,
+              onTap: () {
+                globals.isLoggedIn = false;
+                Navigator.pop(context);
+                Get.to(() => HomePage());
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -117,7 +124,7 @@ class _EndDrawerWidgetState extends State<EndDrawerWidget> {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
         child: Container(
           padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(

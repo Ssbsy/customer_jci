@@ -1,3 +1,4 @@
+import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -9,14 +10,17 @@ class FrequentlyAskedQuestions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomText(
             title: 'Frequently Asked Questions',
+            textColor: AppColors.mutedBluishGray,
             fontWeight: FontWeight.bold,
-            fontSize: 50,
+            fontSize: 24,
+            isCentered: true,
+            maxLines: 2,
           ),
           const Gap(30),
           _listTile(
@@ -67,18 +71,27 @@ class FrequentlyAskedQuestions extends StatelessWidget {
   }) {
     return ExpansionTile(
       leading: Assets.twChatAlt2Regular,
-      title: CustomText(title: title),
+      title: CustomText(title: title, maxLines: 3, fontSize: 12.5),
       children: [
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
             spacing: 15,
             children: [
-              CustomText(title: subTitle, isJustified: true, maxLines: 10),
+              CustomText(
+                title: subTitle,
+                isJustified: true,
+                maxLines: 25,
+                fontSize: 12,
+              ),
               if (subTitle2 != null)
-                CustomText(title: subTitle2, isJustified: true, maxLines: 10),
+                CustomText(
+                  title: subTitle2,
+                  isJustified: true,
+                  maxLines: 25,
+                  fontSize: 12,
+                ),
               if (subTitle3 != null && subTitle3.isNotEmpty) ...[
-                const Gap(10),
                 Column(
                   spacing: 5,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,9 +119,9 @@ Row _rowSubTitleContent(String _text) {
           color: Colors.green,
           borderRadius: BorderRadius.circular(5),
         ),
-        child: Icon(Icons.check, color: Colors.white, size: 18),
+        child: Icon(Icons.check, color: Colors.white, size: 15),
       ),
-      Expanded(child: CustomText(title: _text, maxLines: 4)),
+      Expanded(child: CustomText(title: _text, maxLines: 4, fontSize: 12)),
     ],
   );
 }

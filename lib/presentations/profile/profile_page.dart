@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/header_widget.dart';
@@ -17,6 +18,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white,
       body: Column(
         children: [
           HeaderWidget(),
@@ -27,7 +29,7 @@ class ProfilePage extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(12),
                     width: double.infinity,
-                    height: MediaQuery.of(context).size.height * 0.167,
+                    height: MediaQuery.of(context).size.height * 0.2,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage('assets/images/profile_bg.png'),
@@ -56,26 +58,29 @@ class ProfilePage extends StatelessWidget {
                   const Gap(25),
                   const ProfileQr(),
                   const Gap(20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _containerUnderQR(
-                        'Edit profile',
-                        icon: const Icon(Icons.edit, size: 16),
-                        onTap: () => Get.to(() => const EditProfileScreen()),
-                      ),
-                      const Gap(10),
-                      _containerUnderQR(
-                        'Account Settings',
-                        onTap:
-                            () => Get.to(() => const AccountSettingsScreen()),
-                      ),
-                      const Gap(10),
-                      _containerUnderQR(
-                        'Orders',
-                        onTap: () => Get.to(() => const OrdersScreen()),
-                      ),
-                    ],
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        _containerUnderQR(
+                          'Edit profile',
+                          icon: const Icon(Icons.edit, size: 16),
+                          onTap: () => Get.to(() => const EditProfileScreen()),
+                        ),
+                        const Gap(10),
+                        _containerUnderQR(
+                          'Account Settings',
+                          onTap:
+                              () => Get.to(() => const AccountSettingsScreen()),
+                        ),
+                        const Gap(10),
+                        _containerUnderQR(
+                          'Orders',
+                          onTap: () => Get.to(() => const OrdersScreen()),
+                        ),
+                      ],
+                    ),
                   ),
                   const Gap(20),
                   const ProfilePageAboutMe(),
@@ -98,7 +103,7 @@ class ProfilePage extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
         decoration: BoxDecoration(
           border: Border.all(width: 1, color: Colors.red.shade700),
           borderRadius: BorderRadius.circular(22),
@@ -112,7 +117,7 @@ class ProfilePage extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        CustomText(title: title, fontSize: 12),
+        CustomText(title: title, fontSize: 10),
         if (icon != null) ...[const SizedBox(width: 10), icon],
       ],
     );

@@ -36,6 +36,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
+        backgroundColor: AppColors.white,
         body: Column(
           children: [
             const HeaderWidget(),
@@ -91,7 +92,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
 
                     AccountSettingsTextFields(),
 
-                    const Gap(400),
+                    const Gap(150),
                     const FooterWidget(),
                   ],
                 ),
@@ -115,7 +116,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       child: CustomText(
         title: text,
         fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
-        fontSize: 16,
+        fontSize: 12.5,
         textColor: color ?? AppColors.black,
       ),
     );

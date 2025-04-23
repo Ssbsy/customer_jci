@@ -13,9 +13,13 @@ class Assets {
     fit: BoxFit.contain,
   );
 
-  static final homeBackground01 = Image.asset(
-    'assets/images/home_background_01.png',
-  );
+  static Image homeBackground01(BuildContext context) {
+    return Image.asset(
+      'assets/images/home_background_01.png',
+      fit: BoxFit.cover,
+      height: MediaQuery.of(context).size.height * 0.8,
+    );
+  }
 
   static final calendarIcon = Image.asset(
     'assets/icons/calendar_icon.png',
@@ -49,19 +53,19 @@ class Assets {
 
   static final locationIconJciHomepage = Image.asset(
     'assets/icons/location_icon_JCI_homepage.png',
-    height: 40,
+    height: 30,
     fit: BoxFit.cover,
   );
 
   static final callIconHomepage = Image.asset(
     'assets/icons/call_icon_homepage.png',
-    height: 40,
+    height: 30,
     fit: BoxFit.cover,
   );
 
   static final messageIconHomepage = Image.asset(
     'assets/icons/message_icon_homepage.png',
-    height: 40,
+    height: 20,
     fit: BoxFit.cover,
   );
 
@@ -72,21 +76,25 @@ class Assets {
 
   static final twitter = Image.asset(
     'assets/icons/twitter.png',
+    height: 20,
     fit: BoxFit.cover,
   );
 
   static final facebook = Image.asset(
     'assets/icons/facebook.png',
+    height: 20,
     fit: BoxFit.cover,
   );
 
   static final instagram = Image.asset(
     'assets/icons/instagram.png',
+    height: 20,
     fit: BoxFit.cover,
   );
 
   static final whatsApp = Image.asset(
     'assets/icons/whats_app.png',
+    height: 20,
     fit: BoxFit.cover,
   );
 

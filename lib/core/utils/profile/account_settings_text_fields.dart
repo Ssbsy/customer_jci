@@ -46,16 +46,20 @@ class _AccountSettingsTextFieldsState extends State<AccountSettingsTextFields> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomText(title: 'Email', fontWeight: FontWeight.bold, fontSize: 16),
+        CustomText(title: 'Email', fontWeight: FontWeight.bold, fontSize: 12),
         const SizedBox(height: 10),
-        CustomTextField(controller: _controller, hintText: 'Email'),
+        CustomTextField(
+          controller: _controller,
+          hintText: 'Email',
+          fontSize: 12,
+        ),
         const SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             CustomButton(
               padding: 10,
-              containerWidth: MediaQuery.of(context).size.width * 0.3,
+              containerWidth: MediaQuery.of(context).size.width * 0.45,
               text: 'Save Changes',
               onTap: () {},
               textSize: 14,
@@ -87,7 +91,7 @@ class _AccountSettingsTextFieldsState extends State<AccountSettingsTextFields> {
           children: [
             CustomButton(
               padding: 10,
-              containerWidth: MediaQuery.of(context).size.width * 0.3,
+              containerWidth: MediaQuery.of(context).size.width * 0.45,
               text: 'Save Changes',
               onTap: () {},
               textSize: 14,
@@ -110,8 +114,8 @@ class _AccountSettingsTextFieldsState extends State<AccountSettingsTextFields> {
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: 5,
       children: [
-        CustomText(title: title, fontWeight: FontWeight.bold, fontSize: 16),
-        CustomTextField(controller: _controller, hintText: title),
+        CustomText(title: title, fontWeight: FontWeight.bold, fontSize: 12),
+        CustomTextField(controller: _controller, hintText: title, fontSize: 12),
       ],
     );
   }
@@ -126,15 +130,23 @@ class _AccountSettingsTextFieldsState extends State<AccountSettingsTextFields> {
         crossAxisAlignment: CrossAxisAlignment.start,
         spacing: 15,
         children: [
-          CustomText(title: Texts.accountsettingsDeleteAccount, maxLines: 10),
-          CustomText(title: title, fontWeight: FontWeight.bold, fontSize: 16),
-          CustomTextField(controller: _controller, hintText: hint),
+          CustomText(
+            title: Texts.accountsettingsDeleteAccount,
+            maxLines: 10,
+            fontSize: 12,
+          ),
+          CustomText(title: title, fontWeight: FontWeight.bold, fontSize: 12),
+          CustomTextField(
+            controller: _controller,
+            hintText: hint,
+            fontSize: 12,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               CustomButton(
                 padding: 10,
-                containerWidth: MediaQuery.of(context).size.width * 0.3,
+                containerWidth: MediaQuery.of(context).size.width * 0.45,
                 text: 'Save Changes',
                 onTap: () {},
                 textSize: 14,

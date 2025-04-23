@@ -30,7 +30,7 @@ class EditProfilePhoto extends StatelessWidget {
                   children: [
                     CustomButton(
                       padding: 10,
-                      containerWidth: MediaQuery.of(context).size.width * 0.25,
+                      containerWidth: MediaQuery.of(context).size.width * 0.3,
                       text: 'Upload New',
                       onTap: () {},
                       borderColor: AppColors.mediumBlue,

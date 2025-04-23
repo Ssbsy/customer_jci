@@ -20,22 +20,23 @@ class NeedHelp extends StatelessWidget {
           child: Card(
             elevation: 5,
             child: Container(
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
                   CustomText(
                     title: "Need Help?",
                     fontWeight: FontWeight.bold,
-                    fontSize: 25,
+                    fontSize: 22,
                   ),
-                  const Gap(20),
+                  const Gap(15),
                   CustomText(
                     title:
                         "For any inquiries, please don't hesitate to reachout to us - we're here to help!",
-                    fontSize: 16,
+                    fontSize: 14,
+                    maxLines: 10,
                     isCentered: true,
                   ),
-                  const Gap(20),
+                  const Gap(15),
                   CustomButton(
                     containerWidth: MediaQuery.of(context).size.width * 0.4,
                     text: "Let's Chat",
@@ -56,27 +57,27 @@ class NeedHelp extends StatelessWidget {
         const Gap(30),
         Assets.locationIconJciHomepage,
         const Gap(15),
-        CustomText(title: 'Clark, Pampanga', fontSize: 16),
+        CustomText(title: 'Clark, Pampanga', fontSize: 14),
         const Gap(25),
         Assets.callIconHomepage,
         const Gap(10),
         Divider(
-          thickness: 5,
+          thickness: 2,
           color: Colors.grey.shade800,
-          indent: 120,
-          endIndent: 120,
+          indent: 50,
+          endIndent: 50,
         ),
         const Gap(25),
         Assets.messageIconHomepage,
         const Gap(10),
         Divider(
-          thickness: 5,
+          thickness: 2,
           color: Colors.grey.shade800,
-          indent: 120,
-          endIndent: 120,
+          indent: 50,
+          endIndent: 50,
         ),
         const Gap(25),
-        Assets.clarkMap,
+        Container(padding: const EdgeInsets.all(20), child: Assets.clarkMap),
         const Gap(25),
         Row(
           spacing: 15,

@@ -1,3 +1,4 @@
+import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
@@ -25,22 +26,23 @@ class BuyTicketPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 30.0),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           CustomText(
                             title: 'Ready for World Congress 2026',
                             fontWeight: FontWeight.bold,
-                            fontSize: 24,
+                            fontSize: 16,
                           ),
                           const Gap(10),
                           CustomText(
-                            fontSize: 18,
+                            fontSize: 14,
                             maxLines: 2,
                             richText: TextSpan(
                               text:
                                   'Mark your calendars! World Congress is coming to ',
                               style: GoogleFonts.roboto(
                                 textStyle: const TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 14,
                                   color: Colors.black,
                                 ),
                               ),
@@ -50,7 +52,7 @@ class BuyTicketPage extends StatelessWidget {
                                   style: GoogleFonts.roboto(
                                     textStyle: const TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 18,
+                                      fontSize: 14,
                                       color: Colors.black,
                                     ),
                                   ),
@@ -59,14 +61,14 @@ class BuyTicketPage extends StatelessWidget {
                             ),
                           ),
 
-                          const Gap(15),
+                          const Gap(20),
 
                           Card(
                             child: Container(
                               width: double.infinity,
                               padding: const EdgeInsets.symmetric(
                                 vertical: 20,
-                                horizontal: 35,
+                                horizontal: 25,
                               ),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,21 +80,23 @@ class BuyTicketPage extends StatelessWidget {
                                       CustomText(
                                         title: 'WORLD CONGRESS 2026',
                                         fontWeight: FontWeight.bold,
+                                        fontSize: 12,
                                       ),
                                       Image.asset(
                                         'assets/logo/jci_logo_png.png',
-                                        height: 60,
+                                        height: 35,
                                         fit: BoxFit.cover,
                                       ),
                                     ],
                                   ),
                                   CustomText(
                                     title: 'Expire Date: 2026-11-15',
-                                    fontSize: 12,
+                                    fontSize: 10,
                                   ),
                                   const Gap(10),
                                   CustomText(
                                     title: 'Special Offer',
+                                    fontSize: 12,
                                     fontWeight: FontWeight.bold,
                                   ),
                                   const Gap(10),
@@ -123,10 +127,13 @@ class BuyTicketPage extends StatelessWidget {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  CustomText(title: 'Ticket Discount'),
+                                  CustomText(
+                                    title: 'Ticket Discount',
+                                    fontSize: 12,
+                                  ),
                                   Icon(
                                     Icons.airplane_ticket,
-                                    color: Colors.red,
+                                    color: AppColors.alertRed,
                                   ),
                                 ],
                               ),
@@ -138,8 +145,8 @@ class BuyTicketPage extends StatelessWidget {
                             onTap: () {},
                             isBold: true,
                             textColor: Colors.white,
-                            borderColor: Colors.deepOrange,
-                            containerColor: Colors.deepOrange,
+                            borderColor: AppColors.alertRed,
+                            containerColor: AppColors.alertRed,
                             borderRadius: 22,
                           ),
                           const Gap(25),
@@ -165,10 +172,12 @@ class BuyTicketPage extends StatelessWidget {
       children: [
         CustomText(
           title: title,
+          fontSize: 12,
           fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
         ),
         CustomText(
           title: subTitle,
+          fontSize: 12,
           fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
         ),
       ],
@@ -180,7 +189,7 @@ class BuyTicketPage extends StatelessWidget {
       spacing: 10,
       children: [
         Icon(Icons.star, color: Colors.yellow.shade800),
-        CustomText(title: title),
+        CustomText(title: title, fontSize: 10),
       ],
     );
   }

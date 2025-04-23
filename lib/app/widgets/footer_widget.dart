@@ -19,7 +19,7 @@ class FooterWidget extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: MediaQuery.of(context).size.height * 0.62,
+          height: MediaQuery.of(context).size.height * 0.85,
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
           decoration: BoxDecoration(
             gradient: LinearGradient(

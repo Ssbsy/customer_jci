@@ -1,7 +1,10 @@
+import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
+import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
+import 'package:jci_worldcon_customer/core/constants/texts.dart';
 
 class ReadyForJciWorldCongress2026 extends StatelessWidget {
   const ReadyForJciWorldCongress2026({super.key});
@@ -16,27 +19,29 @@ class ReadyForJciWorldCongress2026 extends StatelessWidget {
           const Gap(10),
           CustomText(
             title: "Ready for JCI World Congress 2026?",
-            fontSize: 35,
+            textColor: AppColors.mutedBluishGray,
+            fontSize: 18,
+            maxLines: 2,
             fontWeight: FontWeight.bold,
           ),
           const Gap(10),
           CustomText(
-            title:
-                "The biggest global gathering of young leaders is coming to Clark, Pampanga! Mark your calendars for an unforgettable experience filled with networking, innovation, and impact.",
-            fontSize: 16,
+            title: Texts.readyForJciWorldCongressDescription,
+            fontSize: 14,
+            maxLines: 10,
+            fontWeight: FontWeight.w300,
             isJustified: true,
           ),
           const Gap(15),
-          Container(
-            padding: const EdgeInsets.all(15),
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Color(0xFFE0401E),
-              borderRadius: BorderRadius.circular(22),
-            ),
-            child: Center(
-              child: CustomText(title: 'Buy Ticket', textColor: Colors.white),
-            ),
+          CustomButton(
+            text: 'Buy Ticket',
+            onTap: () {},
+            containerColor: AppColors.alertRed,
+            borderColor: AppColors.alertRed,
+            textColor: AppColors.white,
+            borderRadius: 22,
+            textSize: 14,
+            padding: 10,
           ),
         ],
       ),

@@ -58,7 +58,6 @@ class _HomePageState extends State<HomePage> {
                     NeedHelp(),
                     const Gap(25),
                     SeeYouIn2026(),
-                    const Gap(25),
                     FooterWidget(),
                   ],
                 ),

@@ -55,7 +55,7 @@ class Shop extends StatelessWidget {
   ) {
     return Card(
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.5,
+        height: MediaQuery.of(context).size.height * 0.67,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

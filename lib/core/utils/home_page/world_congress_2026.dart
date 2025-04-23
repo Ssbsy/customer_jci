@@ -2,6 +2,7 @@ import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
+import 'package:jci_worldcon_customer/core/constants/texts.dart';
 
 class WorldCongress2026 extends StatelessWidget {
   const WorldCongress2026({super.key});
@@ -9,20 +10,21 @@ class WorldCongress2026 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         children: [
           CustomText(
             title: 'World Congress 2026',
-            fontSize: 25,
+            fontSize: 22,
             fontWeight: FontWeight.bold,
           ),
-          const Gap(25),
+          const Gap(20),
 
           CustomText(
-            title:
-                "Experience a global gathering of leaders, entrepreneurs, and change-makers at the JCI World Congress 2026 in Clark, Pampanga. Engage in high-impact discussions, cultural exchanges, and networking opportunities while exploring the vibrant offerings of the Philippines’ premier MICE destination.",
+            title: Texts.worldCongress2026Description,
             isJustified: true,
+            maxLines: 10,
+            fontWeight: FontWeight.w300,
           ),
 
           const Gap(25),
@@ -41,6 +43,7 @@ class WorldCongress2026 extends StatelessWidget {
 
           _card(
             title: 'Cultural & Networking Experiences',
+            titleSize: 11.5,
             asset: "assets/logo/cultural_and_networking_Experiences_logo.png",
             points: [
               "“Tokyo Drift” themed Japan Night",
@@ -83,6 +86,7 @@ class WorldCongress2026 extends StatelessWidget {
 
   Card _card({
     required String title,
+    double? titleSize,
     required List<String> points,
     required String asset,
   }) {
@@ -99,10 +103,10 @@ class WorldCongress2026 extends StatelessWidget {
               children: [
                 CustomText(
                   title: title,
-                  fontSize: 16,
+                  fontSize: titleSize ?? 14,
                   fontWeight: FontWeight.bold,
                 ),
-                Image.asset(asset),
+                Image.asset(asset, height: 20),
               ],
             ),
             const Gap(10),
@@ -120,7 +124,14 @@ class WorldCongress2026 extends StatelessWidget {
       spacing: 15,
       children: [
         Icon(Icons.circle, size: 5),
-        Expanded(child: CustomText(title: title, fontSize: 13, maxLines: 2)),
+        Expanded(
+          child: CustomText(
+            title: title,
+            fontSize: 12,
+            maxLines: 2,
+            fontWeight: FontWeight.w300,
+          ),
+        ),
       ],
     );
   }
