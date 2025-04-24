@@ -31,13 +31,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     super.dispose();
   }
 
-  // @override
-  // void didChangeAppLifecycleState(AppLifecycleState state){
-  //   if (state == AppLifecycleState.paused) {
-
-  //   }
-  // }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(

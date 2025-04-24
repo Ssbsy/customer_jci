@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:jci_worldcon_customer/presentations/qr_code_page.dart';
 
 class HeaderWidget extends StatefulWidget {
   const HeaderWidget({super.key});
@@ -71,41 +70,41 @@ class _HeaderWidgetState extends State<HeaderWidget> {
             ],
           ),
         ),
-        Container(
-          width: double.infinity,
-          decoration: const BoxDecoration(color: Colors.white),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
-                    child: Assets.jciWorldConLogo,
-                  ),
-                  if (globals.isLoggedIn)
-                    Row(
-                      children: [
-                        GestureDetector(
-                          onTap: () => Get.to(() => const QrCodePage()),
-                          child: Assets.profileIcon,
-                        ),
-                        Builder(
-                          builder: (context) {
-                            return IconButton(
-                              onPressed: () {
-                                Scaffold.of(context).openEndDrawer();
-                              },
-                              icon: Icon(Icons.menu, size: 30, weight: 2),
-                            );
-                          },
-                        ),
-                      ],
+        Card(
+          elevation: 1,
+          child: Container(
+            width: double.infinity,
+            decoration: const BoxDecoration(color: Colors.white),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30.0),
+                      child: Assets.jciWorldConLogo,
                     ),
-                ],
-              ),
-            ],
+                    if (globals.isLoggedIn)
+                      Row(
+                        children: [
+                          Assets.profileIcon,
+                          Builder(
+                            builder: (context) {
+                              return IconButton(
+                                onPressed: () {
+                                  Scaffold.of(context).openEndDrawer();
+                                },
+                                icon: Icon(Icons.menu, size: 30, weight: 2),
+                              );
+                            },
+                          ),
+                        ],
+                      ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ],

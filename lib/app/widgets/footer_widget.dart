@@ -1,14 +1,6 @@
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:jci_worldcon_customer/core/constants/assets.dart';
-import 'package:jci_worldcon_customer/presentations/coc_team_page.dart';
-import 'package:jci_worldcon_customer/presentations/faq_page.dart';
-import 'package:jci_worldcon_customer/presentations/home_page.dart';
-import 'package:jci_worldcon_customer/presentations/shop_page.dart';
 
 class FooterWidget extends StatelessWidget {
   const FooterWidget({super.key});
@@ -31,7 +23,7 @@ class FooterWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Assets.footerLogo,
+              Image.asset('assets/logo/footer_logo_png.png', fit: BoxFit.cover),
               const Gap(30),
               const Divider(thickness: 2, color: Colors.white, endIndent: 200),
               const Gap(30),
@@ -56,22 +48,10 @@ class FooterWidget extends StatelessWidget {
                 spacing: 15,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _quickLinks('Home', () {
-                    Navigator.of(context).pop();
-                    Get.to(() => const HomePage());
-                  }),
-                  _quickLinks('Shop', () {
-                    Navigator.of(context).pop();
-                    Get.to(() => const ShopPage());
-                  }),
-                  _quickLinks('COC Team', () {
-                    Navigator.of(context).pop();
-                    Get.to(() => const CocTeamPage());
-                  }),
-                  _quickLinks('FAQ', () {
-                    Navigator.of(context).pop();
-                    Get.to(() => const FaqPage());
-                  }),
+                  CustomText(title: 'Home', textColor: Colors.white),
+                  CustomText(title: 'Shop', textColor: Colors.white),
+                  CustomText(title: 'COC Team', textColor: Colors.white),
+                  CustomText(title: 'FAQ', textColor: Colors.white),
                 ],
               ),
               const Gap(15),
@@ -92,13 +72,6 @@ class FooterWidget extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-
-  GestureDetector _quickLinks(String text, VoidCallback? onTap) {
-    return GestureDetector(
-      onTap: onTap ?? () {},
-      child: CustomText(title: text, textColor: AppColors.white),
     );
   }
 }
