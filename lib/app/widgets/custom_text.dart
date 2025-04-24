@@ -11,6 +11,7 @@ class CustomText extends StatelessWidget {
   final bool isJustified;
   final int? maxLines;
   final bool isCentered;
+  final double decorationThickness;
 
   const CustomText({
     super.key,
@@ -23,6 +24,7 @@ class CustomText extends StatelessWidget {
     this.isJustified = false,
     this.maxLines,
     this.isCentered = false,
+    this.decorationThickness = 2.0,
   });
 
   @override
@@ -55,6 +57,8 @@ class CustomText extends StatelessWidget {
           color: textColor,
           decoration:
               underline ? TextDecoration.underline : TextDecoration.none,
+          decorationColor: textColor,
+          decorationThickness: underline ? decorationThickness : null,
         ),
       ),
     );

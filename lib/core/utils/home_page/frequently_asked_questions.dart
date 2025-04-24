@@ -74,9 +74,9 @@ class FrequentlyAskedQuestions extends StatelessWidget {
           child: Column(
             spacing: 15,
             children: [
-              CustomText(title: subTitle, isJustified: true),
+              CustomText(title: subTitle, isJustified: true, maxLines: 10),
               if (subTitle2 != null)
-                CustomText(title: subTitle2, isJustified: true),
+                CustomText(title: subTitle2, isJustified: true, maxLines: 10),
               if (subTitle3 != null && subTitle3.isNotEmpty) ...[
                 const Gap(10),
                 Column(
