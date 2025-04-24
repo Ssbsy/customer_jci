@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:jci_worldcon_customer/app/widgets/payment_card_php.dart';
 import 'payment_gcash_page.dart';
+import 'payment_maya_page.dart';
+import 'package:jci_worldcon_customer/app/widgets/payment_done.dart';
+
 
 class PaymentMethods extends StatelessWidget {
   final String productName;
@@ -21,11 +25,10 @@ class PaymentMethods extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder:
-                    (context) => PaymentGCashPage(
-                      productName: productName,
-                      productPrice: productPrice,
-                    ),
+                builder: (context) => PaymentGCashPage(
+                  productName: productName,
+                  productPrice: productPrice,
+                ),
               ),
             );
           },
@@ -34,19 +37,48 @@ class PaymentMethods extends StatelessWidget {
             alignment: MainAxisAlignment.start,
           ),
         ),
-        _singleLogoBox(
-          'assets/logo/maya_logo.png',
-          alignment: MainAxisAlignment.start,
+
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PaymentMayaPage(
+                  productName: productName,
+                  productPrice: productPrice,
+                ),
+              ),
+            );
+          },
+          child: _singleLogoBox(
+            'assets/logo/maya_logo.png',
+            alignment: MainAxisAlignment.start,
+          ),
         ),
-        _cardPaymentBox(
-          label: 'Pay with card (PHP)',
-          logos: [
-            'assets/logo/card_bdo.jpg',
-            'assets/logo/card_bpi.jpg',
-            'assets/logo/card_rcbc.png',
-            'assets/logo/card_landbank.png',
-          ],
+
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PaymentCardPHPPage(
+                  productName: productName,
+                  productPrice: productPrice,
+                ),
+              ),
+            );
+          },
+          child: _cardPaymentBox(
+            label: 'Pay with card (PHP)',
+            logos: [
+              'assets/logo/card_bdo.jpg',
+              'assets/logo/card_bpi.jpg',
+              'assets/logo/card_rcbc.png',
+              'assets/logo/card_landbank.png',
+            ],
+          ),
         ),
+
         _cardPaymentBox(
           label: 'Pay with card (USD)',
           logos: [
@@ -82,9 +114,8 @@ class PaymentMethods extends StatelessWidget {
               logoPath,
               height: 24,
               fit: BoxFit.contain,
-              errorBuilder:
-                  (context, error, stackTrace) =>
-                      const Icon(Icons.error, color: Colors.red),
+              errorBuilder: (context, error, stackTrace) =>
+                  const Icon(Icons.error, color: Colors.red),
             ),
           ],
         ),
@@ -118,23 +149,21 @@ class PaymentMethods extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Row(
-              children:
-                  logos
-                      .map(
-                        (logoPath) => Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
-                          child: Image.asset(
-                            logoPath,
-                            height: 24,
-                            width: 30,
-                            fit: BoxFit.contain,
-                            errorBuilder:
-                                (context, error, stackTrace) =>
-                                    const Icon(Icons.error, color: Colors.red),
-                          ),
-                        ),
-                      )
-                      .toList(),
+              children: logos
+                  .map(
+                    (logoPath) => Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Image.asset(
+                        logoPath,
+                        height: 24,
+                        width: 30,
+                        fit: BoxFit.contain,
+                        errorBuilder: (context, error, stackTrace) =>
+                            const Icon(Icons.error, color: Colors.red),
+                      ),
+                    ),
+                  )
+                  .toList(),
             ),
           ],
         ),

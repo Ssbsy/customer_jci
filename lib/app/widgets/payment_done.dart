@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/header_widget.dart';
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
+import 'package:jci_worldcon_customer/presentations/shop_page.dart';
 
 class PaymentDonePage extends StatefulWidget {
   final String productName;
@@ -101,10 +102,16 @@ class _PaymentDonePageState extends State<PaymentDonePage> {
                       ),
                     ),
                     const SizedBox(height: 40),
-                    SizedBox(
+                  SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          // Navigate to the shop page
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ShopPage()),  // Replace 'ShopPage' with the actual shop page widget
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.alertRed,
                           padding: const EdgeInsets.symmetric(vertical: 14),
@@ -122,6 +129,7 @@ class _PaymentDonePageState extends State<PaymentDonePage> {
                         ),
                       ),
                     ),
+
                   ],
                 ),
               ),
