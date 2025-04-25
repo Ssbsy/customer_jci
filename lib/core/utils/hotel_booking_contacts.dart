@@ -9,7 +9,7 @@ class HotelBookingContacts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
       child: Row(
         spacing: 15,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -47,7 +47,7 @@ class HotelBookingContacts extends StatelessWidget {
       spacing: 10,
       children: [
         logo,
-        CustomText(title: title, textColor: AppColors.mediumBlue),
+        CustomText(title: title, textColor: AppColors.mediumBlue, fontSize: 12),
       ],
     );
   }

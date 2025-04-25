@@ -1,9 +1,10 @@
+import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/globals.dart' as globals;
 import 'package:jci_worldcon_customer/presentations/buy_ticket_page.dart';
 import 'package:jci_worldcon_customer/presentations/coc_team_page.dart';
 import 'package:jci_worldcon_customer/presentations/faq_page.dart';
-import 'package:jci_worldcon_customer/presentations/home_page.dart';
+import 'package:jci_worldcon_customer/presentations/navigation/home_page.dart';
 import 'package:jci_worldcon_customer/presentations/hotel_page.dart';
 import 'package:jci_worldcon_customer/presentations/link_ticket_page.dart';
 import 'package:jci_worldcon_customer/presentations/map_page.dart';
@@ -31,9 +32,9 @@ class _EndDrawerWidgetState extends State<EndDrawerWidget> {
           padding: const EdgeInsets.symmetric(vertical: 20),
           children: <Widget>[
             Image.asset(
-              'assets/logo/jci_worldcon_logo.png',
+              'assets/logo/jci_worldCon_logo-removebg-preview.png',
               fit: BoxFit.contain,
-              height: 100,
+              height: 80,
             ),
             const Gap(25),
             _action(

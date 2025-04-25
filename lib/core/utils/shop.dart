@@ -54,6 +54,7 @@ class Shop extends StatelessWidget {
     VoidCallback onTap,
   ) {
     return Card(
+      elevation: 3,
       child: Container(
         height: MediaQuery.of(context).size.height * 0.67,
         child: Column(

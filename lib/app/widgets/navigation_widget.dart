@@ -5,7 +5,7 @@ import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/core/models/nav_model.dart';
 import 'package:jci_worldcon_customer/presentations/coc_team_page.dart';
 import 'package:jci_worldcon_customer/presentations/faq_page.dart';
-import 'package:jci_worldcon_customer/presentations/home_page.dart';
+import 'package:jci_worldcon_customer/presentations/navigation/home_page.dart';
 import 'package:jci_worldcon_customer/presentations/login_page.dart';
 import 'package:jci_worldcon_customer/presentations/map_page.dart';
 import 'package:jci_worldcon_customer/presentations/register_page.dart';

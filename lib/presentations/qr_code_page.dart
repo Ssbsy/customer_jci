@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_floating_action_bar.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
@@ -15,22 +16,33 @@ class QrCodePage extends StatelessWidget {
       body: Column(
         children: [
           const HeaderWidget(),
-          Column(
-            children: [
-              Stack(
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
                 children: [
-                  ProfileQr(
-                    optionalCard: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 20,
+                      horizontal: 5,
+                    ),
+                    child: Stack(
                       children: [
-                        _card('Scan QR'),
-                        _card('Upload QR', icon: Icon(Icons.upload)),
+                        ProfileQr(
+                          optionalCard: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              _card('Scan QR'),
+                              _card('Upload QR', icon: Icon(Icons.upload)),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
+                  const Gap(20),
                 ],
               ),
-            ],
+            ),
           ),
         ],
       ),

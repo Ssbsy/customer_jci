@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
@@ -62,7 +63,7 @@ class Hotels extends StatelessWidget {
       },
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.all(20),
         margin: const EdgeInsets.only(bottom: 15),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -79,7 +80,7 @@ class Hotels extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             hotel.hotelImage,
-            const SizedBox(height: 10),
+            const Gap(10),
             CustomText(title: hotel.location, fontSize: 17),
             CustomText(
               title: hotel.hotelName,
@@ -90,7 +91,7 @@ class Hotels extends StatelessWidget {
               title: '${hotel.price.toStringAsFixed(2)} USD',
               fontSize: 17,
             ),
-            const SizedBox(height: 5),
+            const Gap(10),
             const ReviewStars(),
           ],
         ),

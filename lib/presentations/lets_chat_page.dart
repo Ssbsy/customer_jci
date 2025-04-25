@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_app_bar.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text_field.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
+import 'package:jci_worldcon_customer/presentations/navigation/home_page.dart';
 
 class LetsChatPage extends StatefulWidget {
   const LetsChatPage({super.key});
@@ -22,21 +25,23 @@ class _LetsChatPageState extends State<LetsChatPage> {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         appBar: CustomAppBar(
-          isAutomaticallyImplyLeading: true,
+          leading: IconButton(
+            onPressed: () => Get.to(() => const HomePage()),
+            icon: Icon(Icons.arrow_back),
+          ),
           actionWidgets: [Assets.jciLogoPng],
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 70),
+        body: Center(
           child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Card(
-                  elevation: 2,
-                  child: Container(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 20,
-                      vertical: 30,
+                      vertical: 20,
                     ),
                     decoration: BoxDecoration(
                       border: Border.all(width: 1, color: AppColors.alertRed),
@@ -81,8 +86,8 @@ class _LetsChatPageState extends State<LetsChatPage> {
                       ],
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

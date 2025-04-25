@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:jci_worldcon_customer/presentations/home_page.dart';
+import 'package:jci_worldcon_customer/presentations/navigation/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 

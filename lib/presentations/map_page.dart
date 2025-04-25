@@ -30,7 +30,7 @@ class _MapPageState extends State<MapPage> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(15.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -101,7 +101,7 @@ class _MapPageState extends State<MapPage> {
               spacing: 15,
               children: [
                 Assets.mapArrivingIcon,
-                CustomText(title: 'Arriving in 2 minutes', fontSize: 20),
+                CustomText(title: 'Arriving in 2 minutes', fontSize: 18),
               ],
             ),
           ),

@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Assets {
+  static final jciWorldConLogoSvg = SvgPicture.asset(
+    'assets/logo/jci_worldCon_logo_svg.svg',
+  );
+
   static final jciWorldConLogo = Image.asset(
-    'assets/logo/jci_worldcon_logo.png',
-    height: 80,
-    width: 80,
+    'assets/logo/jci_worldCon_logo-removebg-preview.png',
+    height: 30,
+    fit: BoxFit.contain,
   );
 
   static final profileIcon = Image.asset(
@@ -167,10 +172,13 @@ class Assets {
 
   static final mapArrivingIcon = Image.asset(
     'assets/icons/map_arriving_icon.png',
+    height: 50,
   );
 
   static final mapPagePhoto = Image.asset(
     'assets/images/map_page_photo.png',
+    height: 300,
+    width: 300,
     fit: BoxFit.cover,
   );
 
@@ -196,5 +204,9 @@ class Assets {
 
   static final ordersScreenTicketImg = Image.asset(
     'assets/images/orders_screen_ticket_img.png',
+  );
+
+  static final messageCircleIcon = Image.asset(
+    'assets/icons/message_cirlce_icon.png',
   );
 }

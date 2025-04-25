@@ -7,7 +7,7 @@ import 'package:gap/gap.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
 import 'package:jci_worldcon_customer/presentations/coc_team_page.dart';
 import 'package:jci_worldcon_customer/presentations/faq_page.dart';
-import 'package:jci_worldcon_customer/presentations/home_page.dart';
+import 'package:jci_worldcon_customer/presentations/navigation/home_page.dart';
 import 'package:jci_worldcon_customer/presentations/shop_page.dart';
 
 class FooterWidget extends StatelessWidget {

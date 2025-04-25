@@ -2,7 +2,7 @@ import 'package:jci_worldcon_customer/app/globals.dart' as globals;
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
 import 'package:jci_worldcon_customer/presentations/forgot_pass_page.dart';
-import 'package:jci_worldcon_customer/presentations/home_page.dart';
+import 'package:jci_worldcon_customer/presentations/navigation/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -26,7 +26,7 @@ class LoginPage extends StatelessWidget {
           // Login Card
           Center(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: 40.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(

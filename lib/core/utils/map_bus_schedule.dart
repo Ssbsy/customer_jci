@@ -79,7 +79,7 @@ class MapBusSchedule extends StatelessWidget {
   }) {
     return Container(
       padding:
-          padding ?? const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          padding ?? const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       decoration:
           decoration ??
           const BoxDecoration(border: Border(right: BorderSide(width: 1))),
