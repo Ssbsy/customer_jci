@@ -102,14 +102,16 @@ class _PaymentDonePageState extends State<PaymentDonePage> {
                       ),
                     ),
                     const SizedBox(height: 40),
-                  SizedBox(
+                    SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
                           // Navigate to the shop page
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => ShopPage()),  // Replace 'ShopPage' with the actual shop page widget
+                            MaterialPageRoute(
+                              builder: (context) => ShopPage(),
+                            ), // Replace 'ShopPage' with the actual shop page widget
                           );
                         },
                         style: ElevatedButton.styleFrom(
@@ -129,7 +131,6 @@ class _PaymentDonePageState extends State<PaymentDonePage> {
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),
