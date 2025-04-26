@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_widgets.dart';
+import 'package:jci_worldcon_customer/presentations/page_manager.dart';
 import 'package:jci_worldcon_customer/presentations/register_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -125,7 +126,7 @@ class LoginPage extends StatelessWidget {
                       text: "Sign In",
                       onPressed: () {
                         globals.isLoggedIn = true;
-                        Get.to(() => HomePage());
+                        Get.to(() => PageManager());
                       },
                       primaryColor: AppColors.alertRed,
                     ),

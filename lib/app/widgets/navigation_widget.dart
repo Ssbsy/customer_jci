@@ -1,46 +1,66 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
-import 'package:jci_worldcon_customer/core/models/nav_model.dart';
-import 'package:jci_worldcon_customer/presentations/coc_team_page.dart';
-import 'package:jci_worldcon_customer/presentations/faq_page.dart';
-import 'package:jci_worldcon_customer/presentations/navigation/home_page.dart';
-import 'package:jci_worldcon_customer/presentations/login_page.dart';
-import 'package:jci_worldcon_customer/presentations/map_page.dart';
-import 'package:jci_worldcon_customer/presentations/register_page.dart';
+import 'package:jci_worldcon_customer/core/constants/assets.dart';
+import 'package:jci_worldcon_customer/presentations/qr_code_page.dart';
 
-class NavigationWidget extends StatefulWidget {
-  const NavigationWidget({super.key});
+class NavigationWidget extends StatelessWidget {
+  final int currentIndex;
+  final Function(int) onTap;
 
-  @override
-  State<NavigationWidget> createState() => _NavigationWidgetState();
-}
-
-class _NavigationWidgetState extends State<NavigationWidget> {
-  final List<NavModel> navItems = [
-    NavModel(icon: Icons.home, page: const HomePage()),
-    NavModel(icon: Icons.language, page: FaqPage()),
-    NavModel(icon: Icons.travel_explore, page: LoginPage()),
-    NavModel(icon: Icons.restaurant, page: RegisterPage()),
-    NavModel(icon: Icons.notifications, page: CocTeamPage()),
-    NavModel(icon: Icons.star, page: MapPage()),
-  ];
+  const NavigationWidget({
+    super.key,
+    required this.currentIndex,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final List<IconData> icons = [
+      Icons.home,
+      Icons.language,
+      Icons.travel_explore,
+      Icons.restaurant,
+      Icons.notifications,
+      Icons.star,
+    ];
+
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10),
       color: AppColors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children:
-            navItems.map((item) {
-              return GestureDetector(
-                onTap: () => Get.to(() => item.page),
-                child: Icon(item.icon),
-              );
-            }).toList(),
+        children: [
+          ...List.generate(icons.length, (index) {
+            final isSelected = index == currentIndex;
+            return GestureDetector(
+              onTap: () => onTap(index),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    icons[index],
+                    color: isSelected ? AppColors.alertRed : AppColors.black,
+                  ),
+                  const SizedBox(height: 4),
+                  Container(
+                    height: 3,
+                    width: 20,
+                    decoration: BoxDecoration(
+                      color:
+                          isSelected ? AppColors.alertRed : Colors.transparent,
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                  ),
+                ],
+              ),
+            );
+          }),
+          GestureDetector(
+            onTap: () => Get.to(() => const QrCodePage()),
+            child: SizedBox(height: 24, child: Assets.profileIcon),
+          ),
+        ],
       ),
     );
   }

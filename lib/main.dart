@@ -2,6 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:jci_worldcon_customer/presentations/navigation/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:jci_worldcon_customer/presentations/page_manager.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,7 +46,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       bottom: true,
       child: GetMaterialApp(
         title: 'JCI WorldCon Customer',
-        home: const HomePage(),
+        home: PageManager(),
         debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.system,
       ),

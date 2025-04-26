@@ -14,7 +14,6 @@ class Assets {
 
   static final profileIcon = Image.asset(
     'assets/icons/profile_icon.png',
-    height: 30,
     fit: BoxFit.contain,
   );
 
@@ -209,4 +208,12 @@ class Assets {
   static final messageCircleIcon = Image.asset(
     'assets/icons/message_cirlce_icon.png',
   );
+
+  static final liveVideoPng = Image.asset('assets/icons/live_video_png.png');
+
+  static final photoPng = Image.asset('assets/images/photo_png.png');
+
+  static final feedPost01 = Image.asset('assets/images/feed_post_01_png.png');
+
+  static final feedPost02 = Image.asset('assets/images/feed_post_02_png.png');
 }

@@ -8,6 +8,7 @@ import 'package:jci_worldcon_customer/presentations/navigation/home_page.dart';
 import 'package:jci_worldcon_customer/presentations/hotel_page.dart';
 import 'package:jci_worldcon_customer/presentations/link_ticket_page.dart';
 import 'package:jci_worldcon_customer/presentations/map_page.dart';
+import 'package:jci_worldcon_customer/presentations/page_manager.dart';
 import 'package:jci_worldcon_customer/presentations/profile/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -41,7 +42,7 @@ class _EndDrawerWidgetState extends State<EndDrawerWidget> {
               'Home',
               onTap: () {
                 Navigator.pop(context);
-                Get.to(() => const HomePage());
+                Get.to(() => const PageManager(index: 0));
               },
             ),
             _action(
@@ -107,7 +108,7 @@ class _EndDrawerWidgetState extends State<EndDrawerWidget> {
               onTap: () {
                 globals.isLoggedIn = false;
                 Navigator.pop(context);
-                Get.to(() => HomePage());
+                Get.to(() => PageManager(index: 0));
               },
             ),
           ],

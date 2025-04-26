@@ -27,48 +27,40 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          HeaderWidget(),
-          if (globals.isLoggedIn) const NavigationWidget(),
-
-          Expanded(
-            child: RefreshIndicator(
-              onRefresh: () => globals.refreshPage(this),
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    JciWorldCongress2026(),
-                    const Gap(25),
-                    WorldCongress2026(),
-                    const Gap(25),
-                    WelcomeToClarkPampanga(),
-                    const Gap(25),
-                    Partnerships(),
-                    const Gap(25),
-                    HighlightsRegisterNow(),
-                    const Gap(25),
-                    ExploreOurProducts(),
-                    const Gap(25),
-                    ReadyForJciWorldCongress2026(),
-                    const Gap(25),
-                    FrequentlyAskedQuestions(),
-                    const Gap(25),
-                    NeedHelp(),
-                    const Gap(25),
-                    SeeYouIn2026(),
-                    FooterWidget(),
-                  ],
-                ),
+    return Column(
+      children: [
+        Expanded(
+          child: RefreshIndicator(
+            onRefresh: () => globals.refreshPage(this),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  JciWorldCongress2026(),
+                  const Gap(25),
+                  WorldCongress2026(),
+                  const Gap(25),
+                  WelcomeToClarkPampanga(),
+                  const Gap(25),
+                  Partnerships(),
+                  const Gap(25),
+                  HighlightsRegisterNow(),
+                  const Gap(25),
+                  ExploreOurProducts(),
+                  const Gap(25),
+                  ReadyForJciWorldCongress2026(),
+                  const Gap(25),
+                  FrequentlyAskedQuestions(),
+                  const Gap(25),
+                  NeedHelp(),
+                  const Gap(25),
+                  SeeYouIn2026(),
+                  FooterWidget(),
+                ],
               ),
             ),
           ),
-        ],
-      ),
-      endDrawer: const EndDrawerWidget(),
-      floatingActionButton:
-          globals.isLoggedIn ? CustomFloatingActionBar() : null,
+        ),
+      ],
     );
   }
 }

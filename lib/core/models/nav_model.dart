@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class NavModel {
   final IconData icon;
-  final Widget page;
+  final Widget Function() builder;
 
-  NavModel({required this.icon, required this.page});
+  NavModel({required this.icon, required this.builder});
 }

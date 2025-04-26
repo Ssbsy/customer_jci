@@ -84,10 +84,6 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                     if (globals.isLoggedIn)
                       Row(
                         children: [
-                          GestureDetector(
-                            onTap: () => Get.to(() => const QrCodePage()),
-                            child: Assets.profileIcon,
-                          ),
                           Builder(
                             builder: (context) {
                               return IconButton(

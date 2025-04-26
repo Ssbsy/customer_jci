@@ -26,6 +26,9 @@ class CustomTextField extends StatelessWidget {
   final Color focusedBorderSideColor;
   final Color? fillColor;
   final bool? isFilled;
+  final double contentPaddingVertical;
+  final double contentPaddingHorizontal;
+  final bool isContentPaddingNull;
 
   const CustomTextField({
     super.key,
@@ -52,6 +55,9 @@ class CustomTextField extends StatelessWidget {
     this.focusedBorderSideColor = AppColors.black,
     this.fillColor,
     this.isFilled = false,
+    this.contentPaddingVertical = 12,
+    this.contentPaddingHorizontal = 12,
+    this.isContentPaddingNull = false,
   });
 
   @override
@@ -78,6 +84,13 @@ class CustomTextField extends StatelessWidget {
         decoration:
             decoration ??
             InputDecoration(
+              contentPadding:
+                  isContentPaddingNull
+                      ? null
+                      : EdgeInsets.symmetric(
+                        vertical: contentPaddingVertical,
+                        horizontal: contentPaddingHorizontal,
+                      ),
               fillColor: fillColor,
               filled: isFilled,
               hintText: hintText,
