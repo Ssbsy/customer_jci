@@ -220,4 +220,20 @@ class Assets {
   static final activityPageContent01 = Image.asset(
     'assets/images/activity_page_content_01_png.png',
   );
+
+  static final activityPageContent02 = Image.asset(
+    'assets/images/activity_page_content_02_png.png',
+  );
+
+  static final activityPageContent03 = Image.asset(
+    'assets/images/activity_page_content_03_png.png',
+  );
+
+  static final activityPageContent04 = Image.asset(
+    'assets/images/activity_page_content_04_png.png',
+  );
+
+  static final restoPageContent01 = Image.asset(
+    'assets/images/resto_page_content_01_png.png',
+  );
 }

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
 import 'package:jci_worldcon_customer/presentations/qr_code_page.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class NavigationWidget extends StatelessWidget {
   final int currentIndex;
@@ -19,10 +20,10 @@ class NavigationWidget extends StatelessWidget {
     final List<IconData> icons = [
       Icons.home,
       Icons.language,
-      Icons.travel_explore,
-      Icons.restaurant,
-      Icons.notifications,
-      Icons.star,
+      MdiIcons.airballoonOutline,
+      MdiIcons.silverwareVariant,
+      Icons.notifications_none,
+      Icons.star_border,
     ];
 
     return Container(

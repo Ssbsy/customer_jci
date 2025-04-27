@@ -4,13 +4,12 @@ import 'package:jci_worldcon_customer/app/widgets/custom_floating_action_bar.dar
 import 'package:jci_worldcon_customer/app/widgets/end_drawer_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/header_widget.dart';
 import 'package:jci_worldcon_customer/app/widgets/navigation_widget.dart';
-import 'package:jci_worldcon_customer/presentations/coc_team_page.dart';
-import 'package:jci_worldcon_customer/presentations/login_page.dart';
-import 'package:jci_worldcon_customer/presentations/map_page.dart';
 import 'package:jci_worldcon_customer/presentations/navigation/activity_page.dart';
 import 'package:jci_worldcon_customer/presentations/navigation/feed_page.dart';
 import 'package:jci_worldcon_customer/presentations/navigation/home_page.dart';
-import 'package:jci_worldcon_customer/presentations/register_page.dart';
+import 'package:jci_worldcon_customer/presentations/navigation/notif_page.dart';
+import 'package:jci_worldcon_customer/presentations/navigation/rating_page.dart';
+import 'package:jci_worldcon_customer/presentations/navigation/resto_page.dart';
 
 class PageManager extends StatefulWidget {
   final int index;
@@ -29,9 +28,9 @@ class _PageManagerState extends State<PageManager> {
     HomePage(),
     FeedPage(),
     ActivityPage(),
-    RegisterPage(),
-    CocTeamPage(),
-    MapPage(),
+    RestoPage(),
+    NotifPage(),
+    RatingPage(),
   ];
 
   @override
@@ -58,6 +57,7 @@ class _PageManagerState extends State<PageManager> {
               NavigationWidget(currentIndex: _currentIndex, onTap: _onNavTap),
             Expanded(
               child: PageView(
+                physics: NeverScrollableScrollPhysics(),
                 controller: _pageController,
                 onPageChanged: (index) => setState(() => _currentIndex = index),
                 children: _pages,

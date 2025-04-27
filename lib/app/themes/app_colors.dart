@@ -14,4 +14,6 @@ class AppColors {
   static const mediumBlue = Color(0xFF4183C4);
   static const mediumGreen = Color(0xFF21BA45);
   static const semiRedOrange = Color.fromARGB(255, 255, 220, 210);
+  static const mutedTeal = Color(0xFF4B7C74);
+  static const veryLightBeige = Color(0xFFF3ECE6);
 }

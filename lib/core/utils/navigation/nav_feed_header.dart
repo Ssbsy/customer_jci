@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
-import 'package:jci_worldcon_customer/app/widgets/custom_text_field.dart';
 import 'package:jci_worldcon_customer/core/constants/assets.dart';
 
 class NavFeedHeader extends StatefulWidget {
@@ -32,18 +31,19 @@ class _NavFeedHeaderState extends State<NavFeedHeader> {
             children: [
               Assets.profileIcon,
               Expanded(
-                child: SizedBox(
-                  height: 50,
-                  child: CustomTextField(
-                    controller: controller,
-                    hintText: "What's on your mind, John?",
-                    fontSize: 11,
-                    padding: const EdgeInsets.all(5),
-                    enabledBorderRadius: 30,
-                    focusedBorderRadius: 30,
-                    isContentPaddingNull: false,
-                    contentPaddingVertical: 0,
-                    contentPaddingHorizontal: 20,
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(22),
+                      border: Border.all(color: AppColors.coolGray),
+                    ),
+                    child: CustomText(
+                      title: "What's on your mind, John?",
+                      textColor: AppColors.coolGray,
+                      fontSize: 12,
+                    ),
                   ),
                 ),
               ),

@@ -2,26 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:jci_worldcon_customer/app/themes/app_colors.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_button.dart';
 import 'package:jci_worldcon_customer/app/widgets/custom_text.dart';
+import 'package:jci_worldcon_customer/core/models/activity.dart';
 
 class ActivityPageContent extends StatelessWidget {
-  final Widget img;
-  final String title;
-  final String location;
+  final Activity activity;
+  final VoidCallback onExplore;
   const ActivityPageContent({
     super.key,
-    required this.img,
-    required this.title,
-    required this.location,
+    required this.activity,
+    required this.onExplore,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(22)),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(22),
+        color: AppColors.veryLightBeige,
+      ),
       clipBehavior: Clip.hardEdge,
       child: Row(
         children: [
-          img,
+          activity.img,
           Expanded(
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -33,7 +35,7 @@ class ActivityPageContent extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomText(
-                        title: title,
+                        title: activity.title,
                         fontWeight: FontWeight.bold,
                         textColor: AppColors.darkBlue,
                         fontSize: 18,
@@ -48,7 +50,7 @@ class ActivityPageContent extends StatelessWidget {
                             size: 15,
                           ),
                           CustomText(
-                            title: location,
+                            title: activity.location,
                             textColor: AppColors.mutedPurple,
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
@@ -62,11 +64,13 @@ class ActivityPageContent extends StatelessWidget {
                     children: [
                       CustomButton(
                         text: 'Explore',
-                        onTap: () {},
+                        textColor: AppColors.mutedTeal,
+                        onTap: onExplore,
                         padding: 5,
                         containerWidth:
                             MediaQuery.of(context).size.width * 0.25,
                         borderRadius: 12,
+                        borderColor: AppColors.mutedTeal,
                       ),
                     ],
                   ),
