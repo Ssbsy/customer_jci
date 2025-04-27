@@ -7,6 +7,7 @@ import 'package:jci_worldcon_customer/app/widgets/navigation_widget.dart';
 import 'package:jci_worldcon_customer/presentations/coc_team_page.dart';
 import 'package:jci_worldcon_customer/presentations/login_page.dart';
 import 'package:jci_worldcon_customer/presentations/map_page.dart';
+import 'package:jci_worldcon_customer/presentations/navigation/activity_page.dart';
 import 'package:jci_worldcon_customer/presentations/navigation/feed_page.dart';
 import 'package:jci_worldcon_customer/presentations/navigation/home_page.dart';
 import 'package:jci_worldcon_customer/presentations/register_page.dart';
@@ -27,7 +28,7 @@ class _PageManagerState extends State<PageManager> {
   final List<Widget> _pages = const [
     HomePage(),
     FeedPage(),
-    LoginPage(),
+    ActivityPage(),
     RegisterPage(),
     CocTeamPage(),
     MapPage(),

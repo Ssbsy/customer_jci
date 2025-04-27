@@ -216,4 +216,8 @@ class Assets {
   static final feedPost01 = Image.asset('assets/images/feed_post_01_png.png');
 
   static final feedPost02 = Image.asset('assets/images/feed_post_02_png.png');
+
+  static final activityPageContent01 = Image.asset(
+    'assets/images/activity_page_content_01_png.png',
+  );
 }
